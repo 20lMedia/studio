@@ -1,7 +1,8 @@
+
 "use client";
 
 import { useFormState, useFormStatus } from "react-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react"; // Added useRef
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -39,6 +40,7 @@ function SubmitButton() {
 }
 
 export function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null); // 1. Define the ref
   const [state, formAction] = useFormState(submitContactForm, initialState);
   const { toast } = useToast();
 
@@ -76,19 +78,28 @@ export function ContactForm() {
           form.setValue("subject", state.fields.subject || "");
           form.setValue("message", state.fields.message || "");
         }
-        if (state.issues) {
-           state.issues.forEach(issue => {
-             // This is a basic way to handle field-specific errors.
-             // For a more robust solution, you might match issue.path to form field names.
-             console.error("Form issue:", issue);
-           });
-        }
+        // RHF handles displaying field-specific errors based on schema.
+        // state.issues can be used for more general form messages if needed beyond state.message.
       }
     }
   }, [state, toast, form]);
 
+  // 2. Define the onValid handler for RHF's handleSubmit
+  const onValidSubmit = () => {
+    if (formRef.current) {
+      const formData = new FormData(formRef.current);
+      formAction(formData); // Manually call the action with FormData
+    }
+  };
+
   return (
-    <form action={formAction} className="space-y-6" onSubmit={form.handleSubmit(() => formAction(new FormData(form.control._form Država)))}>
+    // 3. Use the ref and call handleSubmit with your handler
+    //    action prop is removed as formAction is called manually.
+    <form
+      ref={formRef} // Assign the ref
+      onSubmit={form.handleSubmit(onValidSubmit)} // RHF validates, then calls onValidSubmit
+      className="space-y-6"
+    >
       <div>
         <Label htmlFor="name">Full Name</Label>
         <Input id="name" {...form.register("name")} placeholder="Your Name" />
