@@ -1,6 +1,6 @@
 
 import type { Icon } from 'lucide-react';
-import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles } from 'lucide-react';
+import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote } from 'lucide-react';
 
 export type NavLink = {
   href: string;
@@ -218,3 +218,67 @@ export const companyInfo = {
   values: "Our core values are creativity, integrity, and client-centricity. We believe in pushing design boundaries while maintaining ethical practices and always putting our clients' needs first. Collaboration and open communication are key to our process.",
   approach: "Our design approach is holistic and collaborative. We start by deeply understanding your aspirations and lifestyle. Then, we meticulously plan every detail, from space optimization to material selection, ensuring a cohesive and harmonious result. We manage projects with precision, ensuring they are delivered on time and within budget."
 };
+
+export type WhyChooseUsItem = {
+  id: string;
+  title: string;
+  description: string;
+  icon: Icon;
+};
+
+export const whyChooseUsItems: WhyChooseUsItem[] = [
+  {
+    id: 'expert-craftsmanship',
+    title: 'Expert Craftsmanship',
+    description: 'Our team of skilled designers and artisans bring years of experience and a meticulous eye for detail to every project, ensuring the highest quality results.',
+    icon: ShieldCheck,
+  },
+  {
+    id: 'innovative-solutions',
+    title: 'Innovative Solutions',
+    description: 'We blend creativity with practicality, offering innovative design solutions that are both beautiful and functional, tailored to your unique needs.',
+    icon: Lightbulb,
+  },
+  {
+    id: 'client-centric-approach',
+    title: 'Client-Centric Approach',
+    description: 'Your vision is our priority. We collaborate closely with you throughout the process, ensuring your preferences and lifestyle are at the heart of the design.',
+    icon: Users,
+  },
+];
+
+export type Testimonial = {
+  id: string;
+  quote: string;
+  author: string;
+  role: string;
+  imageUrl?: string;
+  dataAiHint?: string;
+};
+
+export const testimonialsData: Testimonial[] = [
+  {
+    id: 'testimonial-1',
+    quote: "Py Interiors transformed our outdated living room into a modern masterpiece. Their attention to detail and creative vision were outstanding. We couldn't be happier!",
+    author: 'Alex & Jamie P.',
+    role: 'Homeowners, Willow Creek',
+    imageUrl: `https://source.unsplash.com/featured/100x100/?${encodeURIComponent('happy couple')}`,
+    dataAiHint: 'happy couple',
+  },
+  {
+    id: 'testimonial-2',
+    quote: "The team at Py Interiors was incredibly professional and brought our boutique's concept to life perfectly. Our customers love the new ambiance!",
+    author: 'Sarah L.',
+    role: 'Owner, The Chic Boutique',
+    imageUrl: `https://source.unsplash.com/featured/100x100/?${encodeURIComponent('business woman')}`,
+    dataAiHint: 'business woman',
+  },
+  {
+    id: 'testimonial-3',
+    quote: "Working with Py Interiors was a seamless experience. They understood our needs for a functional yet inspiring office space and delivered beyond our expectations.",
+    author: 'Michael B.',
+    role: 'CEO, Tech Solutions Inc.',
+    imageUrl: `https://source.unsplash.com/featured/100x100/?${encodeURIComponent('ceo portrait')}`,
+    dataAiHint: 'ceo portrait',
+  },
+];
