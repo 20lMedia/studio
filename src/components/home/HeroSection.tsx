@@ -15,7 +15,6 @@ export function HeroSection() {
               layout="fill"
               objectFit="cover"
               data-ai-hint="modern office interior"
-              className="rounded-lg"
               priority
             />
           </div>
@@ -23,7 +22,7 @@ export function HeroSection() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline mb-6 text-foreground leading-tight">
               Modern Interior<br />Design Studio
             </h1>
-            <p className="text-base text-muted-foreground mb-8 max-w-md">
+            <p className="text-base text-muted-foreground mb-8 max-w-prose">
               Make the most of compact spaces with space saving furniture that are ingenuous and innovative. Transform your living spaces with interior designs.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-3 text-base font-semibold rounded-md"><Link href="/portfolio">EXPLORE NOW</Link></Button>
@@ -40,10 +39,10 @@ export function HeroSection() {
           </div>
           <div className="grid grid-cols-2 gap-4 md:mt-0 mt-8"> {/* Increased gap and mt */}
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-md"> {/* Added shadow */}
-              <Image src="https://placehold.co/300x300.png" alt="Interior detail with lamp" layout="fill" objectFit="cover" data-ai-hint="desk lamp" className="rounded-lg"/>
+              <Image src="https://placehold.co/300x300.png" alt="Interior detail with lamp" layout="fill" objectFit="cover" data-ai-hint="desk lamp" />
             </div>
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-md"> {/* Added shadow */}
-              <Image src="https://placehold.co/300x300.png" alt="Interior detail with plants" layout="fill" objectFit="cover" data-ai-hint="potted plants shelf" className="rounded-lg"/>
+              <Image src="https://placehold.co/300x300.png" alt="Interior detail with plants" layout="fill" objectFit="cover" data-ai-hint="potted plants shelf" />
             </div>
           </div>
         </div>
