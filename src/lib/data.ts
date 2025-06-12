@@ -282,3 +282,69 @@ export const testimonialsData: Testimonial[] = [
     dataAiHint: 'ceo portrait',
   },
 ];
+
+export type HeroPageData = {
+  mainHeadline: {
+    line1: string;
+    line2: string;
+  };
+  mainParagraph: string;
+  mainCta: {
+    text: string;
+    href: string;
+  };
+  mainImage: {
+    src: string;
+    alt: string;
+    dataAiHint: string;
+  };
+  secondaryHeadline: string;
+  secondaryLink: {
+    text: string;
+    href: string;
+  };
+  smallImage1: {
+    src: string;
+    alt: string;
+    dataAiHint: string;
+  };
+  smallImage2: {
+    src: string;
+    alt: string;
+    dataAiHint: string;
+  };
+};
+
+export const heroPageData: HeroPageData = {
+  mainHeadline: {
+    line1: 'Modern Interior',
+    line2: 'Design Studio',
+  },
+  mainParagraph: 'Make the most of compact spaces with space saving furniture that are ingenuous and innovative. Transform your living spaces with interior designs.',
+  mainCta: {
+    text: 'EXPLORE NOW',
+    href: '/portfolio',
+  },
+  mainImage: {
+    src: 'https://placehold.co/800x1000.png',
+    alt: 'Modern interior workspace with chairs and desk',
+    dataAiHint: 'modern office interior',
+  },
+  secondaryHeadline: 'We will make these unique tastes of yours a design reality!',
+  secondaryLink: {
+    text: 'Continue with Py Interiors',
+    href: '/contact',
+  },
+  smallImage1: {
+    src: 'https://placehold.co/300x300.png',
+    alt: 'Interior detail with lamp',
+    dataAiHint: 'desk lamp',
+  },
+  smallImage2: {
+    src: 'https://placehold.co/300x300.png',
+    alt: 'Interior detail with plants',
+    dataAiHint: 'potted plants shelf',
+  },
+};
+
+    
