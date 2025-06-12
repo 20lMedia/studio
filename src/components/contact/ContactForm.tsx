@@ -2,7 +2,7 @@
 "use client";
 
 import { useFormState, useFormStatus } from "react-dom";
-import { useEffect, useRef } from "react"; // Added useRef
+import { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -32,15 +32,15 @@ const initialState: ContactFormState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-      {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
+    <Button type="submit" disabled={pending} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-base rounded-md"> {/* Adjusted button style */}
+      {pending ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : null} {/* Increased icon size */}
       Send Message
     </Button>
   );
 }
 
 export function ContactForm() {
-  const formRef = useRef<HTMLFormElement>(null); // 1. Define the ref
+  const formRef = useRef<HTMLFormElement>(null);
   const [state, formAction] = useFormState(submitContactForm, initialState);
   const { toast } = useToast();
 
@@ -62,7 +62,7 @@ export function ContactForm() {
           title: "Success!",
           description: state.message,
         });
-        form.reset(); // Reset form on success
+        form.reset();
       } else {
         toast({
           title: "Error",
@@ -70,7 +70,6 @@ export function ContactForm() {
           variant: "destructive",
           duration: 5000,
         });
-        // Populate form fields with previous values if available and there was an error
         if (state.fields) {
           form.setValue("name", state.fields.name || "");
           form.setValue("email", state.fields.email || "");
@@ -78,65 +77,60 @@ export function ContactForm() {
           form.setValue("subject", state.fields.subject || "");
           form.setValue("message", state.fields.message || "");
         }
-        // RHF handles displaying field-specific errors based on schema.
-        // state.issues can be used for more general form messages if needed beyond state.message.
       }
     }
   }, [state, toast, form]);
 
-  // 2. Define the onValid handler for RHF's handleSubmit
   const onValidSubmit = () => {
     if (formRef.current) {
       const formData = new FormData(formRef.current);
-      formAction(formData); // Manually call the action with FormData
+      formAction(formData);
     }
   };
 
   return (
-    // 3. Use the ref and call handleSubmit with your handler
-    //    action prop is removed as formAction is called manually.
     <form
-      ref={formRef} // Assign the ref
-      onSubmit={form.handleSubmit(onValidSubmit)} // RHF validates, then calls onValidSubmit
-      className="space-y-6"
+      ref={formRef}
+      onSubmit={form.handleSubmit(onValidSubmit)}
+      className="space-y-6 md:space-y-7" // Increased spacing
     >
       <div>
-        <Label htmlFor="name">Full Name</Label>
-        <Input id="name" {...form.register("name")} placeholder="Your Name" />
+        <Label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground/90">Full Name</Label> {/* Adjusted label style */}
+        <Input id="name" {...form.register("name")} placeholder="Your Name" className="py-3 px-4" /> {/* Increased padding */}
         {form.formState.errors.name && (
-          <p className="text-sm text-destructive mt-1">{form.formState.errors.name.message}</p>
+          <p className="text-sm text-destructive mt-1.5">{form.formState.errors.name.message}</p> {/* Adjusted margin */}
         )}
       </div>
 
       <div>
-        <Label htmlFor="email">Email Address</Label>
-        <Input id="email" type="email" {...form.register("email")} placeholder="your@email.com" />
+        <Label htmlFor="email" className="mb-2 block text-sm font-medium text-foreground/90">Email Address</Label>
+        <Input id="email" type="email" {...form.register("email")} placeholder="your@email.com" className="py-3 px-4" />
         {form.formState.errors.email && (
-          <p className="text-sm text-destructive mt-1">{form.formState.errors.email.message}</p>
+          <p className="text-sm text-destructive mt-1.5">{form.formState.errors.email.message}</p>
         )}
       </div>
 
       <div>
-        <Label htmlFor="phone">Phone Number (Optional)</Label>
-        <Input id="phone" type="tel" {...form.register("phone")} placeholder="(123) 456-7890" />
+        <Label htmlFor="phone" className="mb-2 block text-sm font-medium text-foreground/90">Phone Number (Optional)</Label>
+        <Input id="phone" type="tel" {...form.register("phone")} placeholder="(123) 456-7890" className="py-3 px-4" />
         {form.formState.errors.phone && (
-          <p className="text-sm text-destructive mt-1">{form.formState.errors.phone.message}</p>
+          <p className="text-sm text-destructive mt-1.5">{form.formState.errors.phone.message}</p>
         )}
       </div>
 
       <div>
-        <Label htmlFor="subject">Subject</Label>
-        <Input id="subject" {...form.register("subject")} placeholder="Inquiry about..." />
+        <Label htmlFor="subject" className="mb-2 block text-sm font-medium text-foreground/90">Subject</Label>
+        <Input id="subject" {...form.register("subject")} placeholder="Inquiry about..." className="py-3 px-4" />
         {form.formState.errors.subject && (
-          <p className="text-sm text-destructive mt-1">{form.formState.errors.subject.message}</p>
+          <p className="text-sm text-destructive mt-1.5">{form.formState.errors.subject.message}</p>
         )}
       </div>
 
       <div>
-        <Label htmlFor="message">Message</Label>
-        <Textarea id="message" {...form.register("message")} placeholder="Your detailed message..." rows={5} />
+        <Label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground/90">Message</Label>
+        <Textarea id="message" {...form.register("message")} placeholder="Your detailed message..." rows={5} className="py-3 px-4" />
         {form.formState.errors.message && (
-          <p className="text-sm text-destructive mt-1">{form.formState.errors.message.message}</p>
+          <p className="text-sm text-destructive mt-1.5">{form.formState.errors.message.message}</p>
         )}
       </div>
       

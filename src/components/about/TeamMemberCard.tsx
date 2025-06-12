@@ -8,22 +8,23 @@ interface TeamMemberCardProps {
 
 export function TeamMemberCard({ member }: TeamMemberCardProps) {
   return (
-    <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <CardHeader>
-        <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-4 border-accent/50">
+    <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out bg-card rounded-lg p-2"> {/* Ensured bg-card, rounded-lg, added p-2 */}
+      <CardHeader className="pt-8"> {/* Increased padding top */}
+        <div className="relative w-36 h-36 mx-auto rounded-full overflow-hidden mb-6 border-4 border-primary/30 shadow-md"> {/* Increased size, border uses primary, added shadow */}
           <Image
             src={member.imageUrl}
             alt={member.name}
             layout="fill"
             objectFit="cover"
             data-ai-hint={member.dataAiHint || 'person portrait'}
+            className="rounded-full"
           />
         </div>
-        <CardTitle className="text-xl font-headline">{member.name}</CardTitle>
-        <CardDescription className="text-accent font-medium">{member.role}</CardDescription>
+        <CardTitle className="text-xl lg:text-2xl font-headline">{member.name}</CardTitle>
+        <CardDescription className="text-primary font-medium text-sm">{member.role}</CardDescription> {/* Use primary color */}
       </CardHeader>
-      <CardContent>
-        <p className="text-sm text-muted-foreground">{member.bio}</p>
+      <CardContent className="pb-8 pt-2"> {/* Adjusted padding */}
+        <p className="text-sm text-muted-foreground leading-relaxed">{member.bio}</p>
       </CardContent>
     </Card>
   );

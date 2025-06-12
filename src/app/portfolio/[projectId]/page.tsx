@@ -1,3 +1,4 @@
+
 import { projects } from '@/lib/data';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -20,77 +21,77 @@ export default function ProjectDetailPage({ params }: { params: { projectId: str
   }
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 md:space-y-16"> {/* Consistent spacing */}
       <section>
-        <Button asChild variant="outline" className="mb-8">
-          <Link href="/portfolio">
+        <Button asChild variant="outline" className="mb-8 md:mb-10 shadow-sm hover:shadow-md"><Link href="/portfolio">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Portfolio
-          </Link>
-        </Button>
+          </Link></Button>
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">{project.title}</h1>
-        <p className="text-lg text-accent font-medium mb-6">{project.category}</p>
+        <p className="text-lg text-primary font-medium mb-6 md:mb-8">{project.category}</p> {/* Use primary for category color */}
       </section>
 
-      <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12"> {/* Increased gap */}
         <div className="lg:col-span-2">
-          <Card className="overflow-hidden shadow-xl">
+          <Card className="overflow-hidden shadow-xl rounded-lg bg-card"> {/* Ensured bg-card, rounded-lg */}
             <div className="aspect-video relative">
               <Image
-                src={project.imageUrl} // Using main image, can be replaced with a carousel for project.images
+                src={project.imageUrl}
                 alt={project.title}
                 layout="fill"
                 objectFit="cover"
                 className="rounded-t-lg"
                 data-ai-hint={project.dataAiHint || 'interior detail'}
+                priority
               />
             </div>
-            <CardContent className="p-6">
+            <CardContent className="p-6 md:p-8"> {/* Increased padding */}
               <h2 className="text-2xl font-headline mb-4">Project Overview</h2>
               <p className="text-muted-foreground leading-relaxed">{project.longDescription}</p>
             </CardContent>
           </Card>
         </div>
 
-        <div className="lg:col-span-1 space-y-6">
-          <Card className="shadow-lg">
-            <CardHeader>
+        <div className="lg:col-span-1 space-y-6 md:space-y-8"> {/* Increased space */}
+          <Card className="shadow-lg rounded-lg bg-card"> {/* Ensured bg-card, rounded-lg */}
+            <CardHeader className="pb-4 pt-6"> {/* Adjusted padding */}
               <CardTitle className="text-xl font-headline">Project Details</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3 text-sm">
+            <CardContent className="space-y-4 text-sm pb-6"> {/* Increased space, adjusted padding */}
               {project.client && (
                 <div className="flex items-center">
-                  <User className="h-4 w-4 mr-2 text-accent" />
-                  <strong>Client:</strong>&nbsp;{project.client}
+                  <User className="h-5 w-5 mr-3 text-primary" /> {/* Use primary for icon color */}
+                  <strong className="text-foreground/80 mr-1">Client:</strong>&nbsp;{project.client}
                 </div>
               )}
               {project.location && (
                 <div className="flex items-center">
-                  <MapPin className="h-4 w-4 mr-2 text-accent" />
-                  <strong>Location:</strong>&nbsp;{project.location}
+                  <MapPin className="h-5 w-5 mr-3 text-primary" /> {/* Use primary for icon color */}
+                  <strong className="text-foreground/80 mr-1">Location:</strong>&nbsp;{project.location}
                 </div>
               )}
               <div className="flex items-center">
-                <CalendarDays className="h-4 w-4 mr-2 text-accent" />
-                <strong>Year:</strong>&nbsp;{project.year}
+                <CalendarDays className="h-5 w-5 mr-3 text-primary" /> {/* Use primary for icon color */}
+                <strong className="text-foreground/80 mr-1">Year:</strong>&nbsp;{project.year}
               </div>
             </CardContent>
           </Card>
 
           {project.images && project.images.length > 0 && (
-            <Card className="shadow-lg">
-              <CardHeader>
+            <Card className="shadow-lg rounded-lg bg-card"> {/* Ensured bg-card, rounded-lg */}
+              <CardHeader className="pb-4 pt-6"> {/* Adjusted padding */}
                 <CardTitle className="text-xl font-headline">Gallery</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="pb-6"> {/* Adjusted padding */}
                 <div className="grid grid-cols-2 gap-4">
-                  {project.images.slice(0,4).map((imgSrc, index) => ( // Show max 4 images for brevity
-                    <div key={index} className="aspect-square relative rounded-md overflow-hidden">
-                       <Image 
-                        src={imgSrc} 
-                        alt={`${project.title} - image ${index + 1}`} 
-                        layout="fill" 
-                        objectFit="cover" 
+                  {project.images.slice(0,4).map((imgSrc, index) => (
+                    <div key={index} className="aspect-square relative rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"> {/* Added shadow and hover effect */}
+                       <Image
+                        src={imgSrc}
+                        alt={`${project.title} - image ${index + 1}`}
+                        layout="fill"
+                        objectFit="cover"
                         data-ai-hint="interior photo"
+                        className="rounded-md"
                         />
                     </div>
                   ))}

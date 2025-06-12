@@ -8,7 +8,7 @@ import { HomeCtaSection } from '@/components/home/HomeCtaSection';
 
 export default function HomePage() {
   return (
-    <div className="space-y-12 md:space-y-20">
+    <div className="space-y-16 md:space-y-24"> {/* Increased spacing */}
       <HeroSection />
       <FeaturedProjects />
       <KeyServicesHome />

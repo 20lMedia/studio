@@ -3,7 +3,7 @@ import { ProjectGrid } from '@/components/portfolio/ProjectGrid';
 
 export default function PortfolioPage() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 md:space-y-20"> {/* Consistent spacing */}
       <section className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-6">Our Portfolio</h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

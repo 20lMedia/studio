@@ -14,7 +14,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 30); // Increased scroll threshold slightly
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -23,21 +23,20 @@ export function Navbar() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md shadow-md' : 'bg-background/60'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${isScrolled ? 'bg-background/90 backdrop-blur-lg shadow-lg' : 'bg-background/70 backdrop-blur-md'}`}> {/* Enhanced blur and shadow on scroll */}
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="text-2xl font-bold font-headline text-primary-foreground hover:text-accent transition-colors">
+        <div className="flex h-20 md:h-24 items-center justify-between"> {/* Increased height */}
+          <Link href="/" className="text-2xl lg:text-3xl font-bold font-headline text-foreground hover:text-primary transition-colors duration-300 ease-in-out"> {/* Adjusted text color, hover to primary */}
             Py Interiors
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden md:flex space-x-6 lg:space-x-8"> {/* Increased spacing */}
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-accent ${
-                  pathname === link.href ? 'text-accent font-semibold' : 'text-foreground'
+                className={`text-sm lg:text-base font-medium transition-colors duration-300 ease-in-out hover:text-primary ${
+                  pathname === link.href ? 'text-primary font-semibold' : 'text-foreground/80' // Dimmer non-active links
                 }`}
               >
                 {link.label}
@@ -45,35 +44,34 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Mobile Navigation */}
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6 text-primary-foreground" />
+                <Button variant="ghost" size="icon" className="text-foreground hover:text-primary"> {/* Adjusted text color */}
+                  <Menu className="h-7 w-7" /> {/* Slightly larger icon */}
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px] bg-background p-6">
-                <div className="flex flex-col space-y-6">
+              <SheetContent side="right" className="w-[280px] bg-background p-6 shadow-xl"> {/* Added shadow */}
+                <div className="flex flex-col space-y-8"> {/* Increased spacing */}
                   <div className="flex justify-between items-center">
-                     <Link href="/" className="text-xl font-bold font-headline text-primary-foreground" onClick={closeMobileMenu}>
+                     <Link href="/" className="text-xl font-bold font-headline text-foreground" onClick={closeMobileMenu}>
                         Py Interiors
                       </Link>
                     <SheetClose asChild>
-                       <Button variant="ghost" size="icon">
-                        <X className="h-6 w-6 text-primary-foreground" />
+                       <Button variant="ghost" size="icon" className="text-foreground hover:text-primary">
+                        <X className="h-7 w-7" /> {/* Slightly larger icon */}
                         <span className="sr-only">Close menu</span>
                       </Button>
                     </SheetClose>
                   </div>
-                  <nav className="flex flex-col space-y-4">
+                  <nav className="flex flex-col space-y-5"> {/* Increased spacing */}
                     {navLinks.map((link) => (
                        <SheetClose asChild key={link.href}>
                         <Link
                           href={link.href}
-                          className={`text-lg font-medium transition-colors hover:text-accent ${
-                            pathname === link.href ? 'text-accent font-semibold' : 'text-foreground'
+                          className={`text-lg font-medium transition-colors duration-300 ease-in-out hover:text-primary ${
+                            pathname === link.href ? 'text-primary font-semibold' : 'text-foreground/80'
                           }`}
                         >
                           {link.label}

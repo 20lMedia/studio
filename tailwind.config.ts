@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Playfair Display', 'serif'],
+        headline: ['Space Grotesk', 'sans-serif'], // Changed from Playfair Display
         code: ['monospace'],
       },
       colors: {

@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function AboutPage() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 md:space-y-24"> {/* Increased spacing */}
       <section className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-6">About Py Interiors</h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -14,52 +14,54 @@ export default function AboutPage() {
       </section>
 
       <section>
-        <Card className="shadow-lg">
-          <CardHeader>
+        <Card className="shadow-lg rounded-lg bg-card"> {/* Ensured bg-card, rounded-lg */}
+          <CardHeader className="p-6 md:p-8"> {/* Increased padding */}
             <CardTitle className="text-2xl md:text-3xl font-headline">Our Story</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-6 md:p-8 pt-0"> {/* Increased padding */}
             <p className="text-muted-foreground leading-relaxed">{companyInfo.history}</p>
           </CardContent>
         </Card>
       </section>
 
       <section>
-         <Card className="shadow-lg">
-          <CardHeader>
+         <Card className="shadow-lg rounded-lg bg-card"> {/* Ensured bg-card, rounded-lg */}
+          <CardHeader className="p-6 md:p-8"> {/* Increased padding */}
             <CardTitle className="text-2xl md:text-3xl font-headline">Our Mission</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-6 md:p-8 pt-0"> {/* Increased padding */}
             <p className="text-muted-foreground leading-relaxed">{companyInfo.mission}</p>
           </CardContent>
         </Card>
       </section>
 
       <section>
-        <Card className="shadow-lg">
-          <CardHeader>
+        <Card className="shadow-lg rounded-lg bg-card"> {/* Ensured bg-card, rounded-lg */}
+          <CardHeader className="p-6 md:p-8"> {/* Increased padding */}
             <CardTitle className="text-2xl md:text-3xl font-headline">Our Values</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-6 md:p-8 pt-0"> {/* Increased padding */}
             <p className="text-muted-foreground leading-relaxed">{companyInfo.values}</p>
           </CardContent>
         </Card>
       </section>
 
       <section>
-         <Card className="shadow-lg">
-          <CardHeader>
+         <Card className="shadow-lg rounded-lg bg-card"> {/* Ensured bg-card, rounded-lg */}
+          <CardHeader className="p-6 md:p-8"> {/* Increased padding */}
             <CardTitle className="text-2xl md:text-3xl font-headline">Our Approach</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-6 md:p-8 pt-0"> {/* Increased padding */}
             <p className="text-muted-foreground leading-relaxed">{companyInfo.approach}</p>
           </CardContent>
         </Card>
       </section>
 
       <section>
-        <h2 className="text-3xl md:text-4xl font-bold font-headline text-center mb-12">Meet Our Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="text-center mb-12 md:mb-16"> {/* Added wrapper for text and increased margin */}
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Meet Our Team</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"> {/* Increased gap */}
           {teamMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />
           ))}
