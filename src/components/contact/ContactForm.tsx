@@ -32,8 +32,8 @@ const initialState: ContactFormState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-base rounded-md"> {/* Adjusted button style */}
-      {pending ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : null} {/* Increased icon size */}
+    <Button type="submit" disabled={pending} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-base rounded-md">
+      {pending ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : null}
       Send Message
     </Button>
   );
@@ -92,13 +92,13 @@ export function ContactForm() {
     <form
       ref={formRef}
       onSubmit={form.handleSubmit(onValidSubmit)}
-      className="space-y-6 md:space-y-7" // Increased spacing
+      className="space-y-6 md:space-y-7"
     >
       <div>
-        <Label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground/90">Full Name</Label> {/* Adjusted label style */}
-        <Input id="name" {...form.register("name")} placeholder="Your Name" className="py-3 px-4" /> {/* Increased padding */}
+        <Label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground/90">Full Name</Label>
+        <Input id="name" {...form.register("name")} placeholder="Your Name" className="py-3 px-4" />
         {form.formState.errors.name && (
-          <p className="text-sm text-destructive mt-1.5">{form.formState.errors.name.message}</p> {/* Adjusted margin */}
+          <p className="text-sm text-destructive mt-1.5">{form.formState.errors.name.message}</p>
         )}
       </div>
 

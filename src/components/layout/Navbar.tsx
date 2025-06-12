@@ -1,3 +1,4 @@
+
 "use client";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -58,12 +59,15 @@ export function Navbar() {
                      <Link href="/" className="text-xl font-bold font-headline text-foreground" onClick={closeMobileMenu}>
                         Py Interiors
                       </Link>
+                    {/* The SheetContent component already provides a default close button (X) in the top right.
+                        The custom SheetClose button below was removed to avoid duplication and styling conflicts.
                     <SheetClose asChild>
                        <Button variant="ghost" size="icon" className="text-foreground hover:text-primary">
-                        <X className="h-7 w-7" /> {/* Slightly larger icon */}
+                        <X className="h-7 w-7" />
                         <span className="sr-only">Close menu</span>
                       </Button>
                     </SheetClose>
+                    */}
                   </div>
                   <nav className="flex flex-col space-y-5"> {/* Increased spacing */}
                     {navLinks.map((link) => (
