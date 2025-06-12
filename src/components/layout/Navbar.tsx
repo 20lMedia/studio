@@ -2,11 +2,12 @@
 "use client";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react'; // Removed X as it's handled by SheetClose
 import { useState, useEffect } from 'react';
 import { navLinks } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Logo } from './Logo'; // Import the new Logo component
 
 export function Navbar() {
   const pathname = usePathname();
@@ -15,7 +16,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 30); // Increased scroll threshold slightly
+      setIsScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -24,20 +25,20 @@ export function Navbar() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${isScrolled ? 'bg-background/90 backdrop-blur-lg shadow-lg' : 'bg-background/70 backdrop-blur-md'}`}> {/* Enhanced blur and shadow on scroll */}
+    <header className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${isScrolled ? 'bg-background/90 backdrop-blur-lg shadow-lg' : 'bg-background/70 backdrop-blur-md'}`}>
       <div className="container mx-auto px-4">
-        <div className="flex h-20 md:h-24 items-center justify-between"> {/* Increased height */}
-          <Link href="/" className="text-2xl lg:text-3xl font-bold font-headline text-foreground hover:text-primary transition-colors duration-300 ease-in-out"> {/* Adjusted text color, hover to primary */}
-            Py Interiors
+        <div className="flex h-20 md:h-24 items-center justify-between">
+          <Link href="/" aria-label="Py Interiors Home" className="hover:opacity-80 transition-opacity duration-300 ease-in-out">
+            <Logo className="h-8 md:h-10 w-auto" />
           </Link>
 
-          <nav className="hidden md:flex space-x-6 lg:space-x-8"> {/* Increased spacing */}
+          <nav className="hidden md:flex space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`text-sm lg:text-base font-medium transition-colors duration-300 ease-in-out hover:text-primary ${
-                  pathname === link.href ? 'text-primary font-semibold' : 'text-foreground/80' // Dimmer non-active links
+                  pathname === link.href ? 'text-primary font-semibold' : 'text-foreground/80'
                 }`}
               >
                 {link.label}
@@ -48,32 +49,25 @@ export function Navbar() {
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-foreground hover:text-primary"> {/* Adjusted text color */}
-                  <Menu className="h-7 w-7" /> {/* Slightly larger icon */}
+                <Button variant="ghost" size="icon" className="text-foreground hover:text-primary">
+                  <Menu className="h-7 w-7" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px] bg-background p-6 shadow-xl"> {/* Added shadow */}
-                <div className="flex flex-col space-y-8"> {/* Increased spacing */}
+              <SheetContent side="right" className="w-[280px] bg-background p-6 shadow-xl">
+                <div className="flex flex-col space-y-8">
                   <div className="flex justify-between items-center">
-                     <Link href="/" className="text-xl font-bold font-headline text-foreground" onClick={closeMobileMenu}>
-                        Py Interiors
+                     <Link href="/" aria-label="Py Interiors Home" onClick={closeMobileMenu}>
+                        <Logo className="h-8 w-auto" />
                       </Link>
-                    {/* The SheetContent component already provides a default close button (X) in the top right.
-                        The custom SheetClose button below was removed to avoid duplication and styling conflicts.
-                    <SheetClose asChild>
-                       <Button variant="ghost" size="icon" className="text-foreground hover:text-primary">
-                        <X className="h-7 w-7" />
-                        <span className="sr-only">Close menu</span>
-                      </Button>
-                    </SheetClose>
-                    */}
+                    {/* Default SheetClose (X button) is provided by SheetContent */}
                   </div>
-                  <nav className="flex flex-col space-y-5"> {/* Increased spacing */}
+                  <nav className="flex flex-col space-y-5">
                     {navLinks.map((link) => (
                        <SheetClose asChild key={link.href}>
                         <Link
                           href={link.href}
+                          onClick={closeMobileMenu} // Ensure menu closes on link click
                           className={`text-lg font-medium transition-colors duration-300 ease-in-out hover:text-primary ${
                             pathname === link.href ? 'text-primary font-semibold' : 'text-foreground/80'
                           }`}
