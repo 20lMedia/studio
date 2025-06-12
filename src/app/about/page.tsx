@@ -1,3 +1,4 @@
+
 import { teamMembers, companyInfo } from '@/lib/data';
 import { TeamMemberCard } from '@/components/about/TeamMemberCard';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -30,6 +31,28 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">{companyInfo.mission}</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section>
+        <Card className="shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-2xl md:text-3xl font-headline">Our Values</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground leading-relaxed">{companyInfo.values}</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section>
+         <Card className="shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-2xl md:text-3xl font-headline">Our Approach</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground leading-relaxed">{companyInfo.approach}</p>
           </CardContent>
         </Card>
       </section>
