@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ContactForm } from '@/components/contact/ContactForm';
 import { companyInfo } from '@/lib/data';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,6 +8,18 @@ import Link from 'next/link';
 export default function ContactPage() {
   return (
     <div className="space-y-16">
+      <section>
+        <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden shadow-xl">
+          <Image
+            src="https://placehold.co/1200x400.png"
+            alt="Contact Py Interiors - Modern office view"
+            layout="fill"
+            objectFit="cover"
+            data-ai-hint="office cityscape"
+          />
+        </div>
+      </section>
+
       <section className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-6">Get In Touch</h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
