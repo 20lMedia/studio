@@ -16,11 +16,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <CardHeader className="p-0">
         <div className="aspect-video relative overflow-hidden rounded-t-lg"> {/* Added overflow-hidden and rounded-t-lg here for image */}
           <Image
-            src={project.imageUrl}
-            alt={project.title}
+            src={project.imageUrl.src}
+            alt={project.imageUrl.alt}
             layout="fill"
             objectFit="cover"
-            data-ai-hint={project.dataAiHint || 'interior design'}
+            data-ai-hint={project.imageUrl.dataAiHint || 'interior design'}
             className="transition-transform duration-300 ease-in-out group-hover:scale-105" /* Added scale on hover */
           />
         </div>

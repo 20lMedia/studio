@@ -35,12 +35,12 @@ export default function ProjectDetailPage({ params }: { params: { projectId: str
           <Card className="overflow-hidden shadow-xl rounded-lg bg-card"> {/* Ensured bg-card, rounded-lg */}
             <div className="aspect-video relative">
               <Image
-                src={project.imageUrl}
-                alt={project.title}
+                src={project.imageUrl.src}
+                alt={project.imageUrl.alt}
                 layout="fill"
                 objectFit="cover"
                 className="rounded-t-lg"
-                data-ai-hint={project.dataAiHint || 'interior detail'}
+                data-ai-hint={project.imageUrl.dataAiHint || 'interior detail'}
                 priority
               />
             </div>
@@ -83,14 +83,14 @@ export default function ProjectDetailPage({ params }: { params: { projectId: str
               </CardHeader>
               <CardContent className="pb-6"> {/* Adjusted padding */}
                 <div className="grid grid-cols-2 gap-4">
-                  {project.images.slice(0,4).map((imgSrc, index) => (
+                  {project.images.slice(0,4).map((img, index) => (
                     <div key={index} className="aspect-square relative rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"> {/* Added shadow and hover effect */}
                        <Image
-                        src={imgSrc}
-                        alt={`${project.title} - image ${index + 1}`}
+                        src={img.src}
+                        alt={img.alt}
                         layout="fill"
                         objectFit="cover"
-                        data-ai-hint="interior photo"
+                        data-ai-hint={img.dataAiHint || 'interior photo'}
                         className="rounded-md"
                         />
                     </div>

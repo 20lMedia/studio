@@ -16,18 +16,23 @@ export const navLinks: NavLink[] = [
   { href: '/contact', label: 'Contact' },
 ];
 
+export type ImageObject = {
+  src: string;
+  alt: string;
+  dataAiHint?: string;
+};
+
 export type Project = {
   id: string;
   title: string;
   description: string;
   longDescription: string;
-  imageUrl: string;
+  imageUrl: ImageObject;
   category: string;
   year: number;
   client?: string;
   location?: string;
-  images?: string[];
-  dataAiHint?: string;
+  images?: ImageObject[];
 };
 
 export const projects: Project[] = [
@@ -36,16 +41,19 @@ export const projects: Project[] = [
     title: 'Modern Loft Conversion',
     description: 'Transforming an industrial loft into a chic, contemporary living space.',
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    dataAiHint: 'modern loft',
+    imageUrl: {
+      src: 'https://placehold.co/600x400.png',
+      alt: 'Modern loft living space with high ceilings and contemporary furniture',
+      dataAiHint: 'modern loft',
+    },
     category: 'Residential',
     year: 2023,
     client: 'Private Residence',
     location: 'Downtown Metropolis',
     images: [
-      'https://placehold.co/800x600.png?a=1',
-      'https://placehold.co/800x600.png?a=2',
-      'https://placehold.co/800x600.png?a=3',
+      { src: 'https://placehold.co/800x600.png?a=1', alt: 'View of loft kitchen area', dataAiHint: 'loft kitchen' },
+      { src: 'https://placehold.co/800x600.png?a=2', alt: 'Loft bedroom with minimalist design', dataAiHint: 'minimalist bedroom' },
+      { src: 'https://placehold.co/800x600.png?a=3', alt: 'Detail of exposed brickwork in loft', dataAiHint: 'exposed brick' },
     ]
   },
   {
@@ -53,15 +61,18 @@ export const projects: Project[] = [
     title: 'Luxury Boutique Hotel Lobby',
     description: 'Elegant and inviting lobby design for a high-end boutique hotel.',
     longDescription: 'The goal for this boutique hotel lobby was to create a memorable first impression. We blended classic elegance with modern luxury, using plush velvet seating, marble accents, and statement lighting. A bespoke reception desk and curated art pieces complete the opulent yet welcoming atmosphere.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    dataAiHint: 'hotel lobby',
+    imageUrl: {
+      src: 'https://placehold.co/600x400.png',
+      alt: 'Elegant hotel lobby with plush seating and marble accents',
+      dataAiHint: 'hotel lobby',
+    },
     category: 'Commercial',
     year: 2022,
     client: 'The Velvet Orchid Hotel',
     location: 'City Center',
      images: [
-      'https://placehold.co/800x600.png?b=1',
-      'https://placehold.co/800x600.png?b=2',
+      { src: 'https://placehold.co/800x600.png?b=1', alt: 'Hotel reception desk detail', dataAiHint: 'reception desk' },
+      { src: 'https://placehold.co/800x600.png?b=2', alt: 'Statement lighting in hotel lobby', dataAiHint: 'statement lighting' },
     ]
   },
   {
@@ -69,17 +80,20 @@ export const projects: Project[] = [
     title: 'Serene Minimalist Apartment',
     description: 'A calming and clutter-free apartment embracing minimalist principles.',
     longDescription: 'This apartment design focuses on simplicity, functionality, and tranquility. We used a light color palette, natural materials like wood and linen, and clever storage solutions to maintain a clutter-free environment. The result is a peaceful haven that promotes relaxation and mindfulness.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    dataAiHint: 'minimalist apartment',
+    imageUrl: {
+      src: 'https://placehold.co/600x400.png',
+      alt: 'Bright and airy minimalist apartment living room',
+      dataAiHint: 'minimalist apartment',
+    },
     category: 'Residential',
     year: 2023,
     client: 'Ms. Anya Sharma',
     location: 'Riverside District',
     images: [
-      'https://placehold.co/800x600.png?c=1',
-      'https://placehold.co/800x600.png?c=2',
-      'https://placehold.co/800x600.png?c=3',
-      'https://placehold.co/800x600.png?c=4',
+      { src: 'https://placehold.co/800x600.png?c=1', alt: 'Minimalist kitchen with light wood cabinets', dataAiHint: 'minimalist kitchen' },
+      { src: 'https://placehold.co/800x600.png?c=2', alt: 'Bedroom with natural light and simple decor', dataAiHint: 'simple bedroom' },
+      { src: 'https://placehold.co/800x600.png?c=3', alt: 'Close-up of natural textures in apartment', dataAiHint: 'natural textures' },
+      { src: 'https://placehold.co/800x600.png?c=4', alt: 'View of minimalist apartment balcony', dataAiHint: 'apartment balcony' },
     ]
   },
   {
@@ -87,14 +101,17 @@ export const projects: Project[] = [
     title: 'Vibrant Co-working Space',
     description: 'Dynamic and inspiring design for a modern co-working hub.',
     longDescription: 'This co-working space was designed to foster creativity and collaboration. It features a mix of private offices, open-plan work areas, and comfortable breakout zones. Bold colors, ergonomic furniture, and biophilic design elements contribute to a productive and energizing atmosphere.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    dataAiHint: 'coworking space',
+    imageUrl: {
+      src: 'https://placehold.co/600x400.png',
+      alt: 'Modern co-working space with colorful accents and varied seating',
+      dataAiHint: 'coworking space',
+    },
     category: 'Commercial',
     year: 2022,
     client: 'Innovate Hub',
     location: 'Tech Park',
     images: [
-      'https://placehold.co/800x600.png?d=1',
+      { src: 'https://placehold.co/800x600.png?d=1', alt: 'Breakout area in co-working space', dataAiHint: 'office breakout' },
     ]
   },
 ];
@@ -157,7 +174,7 @@ export type TeamMember = {
   name: string;
   role: string;
   bio: string;
-  imageUrl: string;
+  imageUrl: string; // Keep as string for Unsplash URLs or direct links
   dataAiHint?: string;
 };
 
@@ -252,7 +269,7 @@ export type Testimonial = {
   quote: string;
   author: string;
   role: string;
-  imageUrl?: string;
+  imageUrl?: string; // Keep as string for Unsplash URLs or direct links
   dataAiHint?: string;
 };
 
@@ -293,26 +310,14 @@ export type HeroPageData = {
     text: string;
     href: string;
   };
-  mainImage: {
-    src: string;
-    alt: string;
-    dataAiHint: string;
-  };
+  mainImage: ImageObject; // Use ImageObject type
   secondaryHeadline: string;
   secondaryLink: {
     text: string;
     href: string;
   };
-  smallImage1: {
-    src: string;
-    alt: string;
-    dataAiHint: string;
-  };
-  smallImage2: {
-    src: string;
-    alt: string;
-    dataAiHint: string;
-  };
+  smallImage1: ImageObject; // Use ImageObject type
+  smallImage2: ImageObject; // Use ImageObject type
 };
 
 export const heroPageData: HeroPageData = {
@@ -346,5 +351,3 @@ export const heroPageData: HeroPageData = {
     dataAiHint: 'potted plants shelf',
   },
 };
-
-    
