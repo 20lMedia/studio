@@ -167,7 +167,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Jane Doe',
     role: 'Founder & Lead Designer',
     bio: 'With over 15 years of experience, Jane brings a passion for timeless design and a keen eye for detail to every project. She believes great design enhances quality of life.',
-    imageUrl: 'https://placehold.co/300x300.png',
+    imageUrl: `https://source.unsplash.com/featured/300x300/?${encodeURIComponent('professional woman')}`,
     dataAiHint: 'professional woman',
   },
   {
@@ -175,7 +175,7 @@ export const teamMembers: TeamMember[] = [
     name: 'John Smith',
     role: 'Senior Interior Designer',
     bio: 'John specializes in sustainable design and innovative material use. His work is characterized by clean lines and a harmonious balance of form and function.',
-    imageUrl: 'https://placehold.co/300x300.png',
+    imageUrl: `https://source.unsplash.com/featured/300x300/?${encodeURIComponent('professional man')}`,
     dataAiHint: 'professional man',
   },
   {
@@ -183,7 +183,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Alice Brown',
     role: 'Project Manager',
     bio: 'Alice ensures every project runs smoothly from concept to completion. Her organizational skills and client-focused approach are invaluable to the team.',
-    imageUrl: 'https://placehold.co/300x300.png',
+    imageUrl: `https://source.unsplash.com/featured/300x300/?${encodeURIComponent('smiling woman')}`,
     dataAiHint: 'smiling woman',
   },
 ];

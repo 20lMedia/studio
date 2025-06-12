@@ -11,11 +11,12 @@ export default function ContactPage() {
       <section>
         <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden shadow-xl">
           <Image
-            src="https://placehold.co/1200x400.png"
+            src={`https://source.unsplash.com/featured/1200x400/?${encodeURIComponent('office cityscape')}`}
             alt="Contact Py Interiors - Modern office view"
             layout="fill"
             objectFit="cover"
             data-ai-hint="office cityscape"
+            priority
           />
         </div>
       </section>
