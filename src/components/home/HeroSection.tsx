@@ -9,7 +9,7 @@ export function HeroSection() {
     <section className="py-10 md:py-12"> {/* Adjusted padding */}
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-5 gap-8 lg:gap-12 items-center mb-16 md:mb-24"> {/* Increased gap and bottom margin */}
-          <div className="md:col-span-3 relative h-[350px] sm:h-[500px] md:h-[600px] lg:h-[700px] rounded-lg overflow-hidden shadow-lg"> {/* Added shadow */}
+          <div className="md:col-span-3 relative h-[350px] sm:h-[500px] md:h-[600px] lg:h-[600px] rounded-lg overflow-hidden shadow-lg"> {/* Added shadow, updated lg height */}
             <Image
               src={heroPageData.mainImage.src}
               alt={heroPageData.mainImage.alt}

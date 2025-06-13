@@ -325,16 +325,16 @@ export const heroPageData: HeroPageData = {
   mainParagraph: 'Make the most of compact spaces with space saving furniture that are ingenuous and innovative. Transform your living spaces with interior designs.',
   mainCta: {
     text: 'EXPLORE NOW',
-    href: '/about', // Changed from /portfolio as portfolio page is removed
+    href: '/about', 
   },
   mainImage: {
-    src: 'https://placehold.co/800x1000.png',
+    src: 'https://placehold.co/600x600.png',
     alt: 'Modern interior workspace with chairs and desk',
     dataAiHint: 'modern office interior',
   },
   secondaryHeadline: 'We will make these unique tastes of yours a design reality!',
   secondaryLink: {
-    text: 'Learn About Py Interiors', // Changed from 'Continue with Py Interiors' and href
+    text: 'Learn About Py Interiors', 
     href: '/about',
   },
   smallImage1: {
@@ -348,3 +348,4 @@ export const heroPageData: HeroPageData = {
     dataAiHint: 'potted plants shelf',
   },
 };
+
