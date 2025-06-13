@@ -10,14 +10,14 @@ export function HomeCtaSection() {
           Ready to Transform Your Space?
         </h2>
         <p className="text-lg mb-10 max-w-2xl mx-auto text-primary-foreground/90"> {/* Increased bottom margin, adjusted opacity */}
-          Let&apos;s discuss your vision and how Py Interiors can bring it to life. Schedule a consultation with our expert designers today.
+          Let&apos;s discuss your vision and how Py Interiors can bring it to life. Explore our about page to learn more about our approach.
         </p>
         <Button
           asChild
           size="lg"
           variant="outline"
           className="bg-background text-foreground hover:bg-background/90 border-transparent px-12 py-3 text-base font-semibold rounded-md hover:shadow-lg" /* Adjusted px, rounded, added hover shadow */
-        ><Link href="/contact">Get In Touch</Link></Button>
+        ><Link href="/about">Learn About Us</Link></Button> 
       </div>
     </section>
   );

@@ -11,9 +11,6 @@ export type NavLink = {
 export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/portfolio', label: 'Portfolio' },
-  { href: '/services', label: 'Services' },
-  { href: '/contact', label: 'Contact' },
 ];
 
 export type ImageObject = {
@@ -174,7 +171,7 @@ export type TeamMember = {
   name: string;
   role: string;
   bio: string;
-  imageUrl: string; // Keep as string for Unsplash URLs or direct links
+  imageUrl: string; 
   dataAiHint?: string;
 };
 
@@ -269,7 +266,7 @@ export type Testimonial = {
   quote: string;
   author: string;
   role: string;
-  imageUrl?: string; // Keep as string for Unsplash URLs or direct links
+  imageUrl?: string; 
   dataAiHint?: string;
 };
 
@@ -310,14 +307,14 @@ export type HeroPageData = {
     text: string;
     href: string;
   };
-  mainImage: ImageObject; // Use ImageObject type
+  mainImage: ImageObject; 
   secondaryHeadline: string;
   secondaryLink: {
     text: string;
     href: string;
   };
-  smallImage1: ImageObject; // Use ImageObject type
-  smallImage2: ImageObject; // Use ImageObject type
+  smallImage1: ImageObject; 
+  smallImage2: ImageObject; 
 };
 
 export const heroPageData: HeroPageData = {
@@ -328,7 +325,7 @@ export const heroPageData: HeroPageData = {
   mainParagraph: 'Make the most of compact spaces with space saving furniture that are ingenuous and innovative. Transform your living spaces with interior designs.',
   mainCta: {
     text: 'EXPLORE NOW',
-    href: '/portfolio',
+    href: '/about', // Changed from /portfolio as portfolio page is removed
   },
   mainImage: {
     src: 'https://placehold.co/800x1000.png',
@@ -337,8 +334,8 @@ export const heroPageData: HeroPageData = {
   },
   secondaryHeadline: 'We will make these unique tastes of yours a design reality!',
   secondaryLink: {
-    text: 'Continue with Py Interiors',
-    href: '/contact',
+    text: 'Learn About Py Interiors', // Changed from 'Continue with Py Interiors' and href
+    href: '/about',
   },
   smallImage1: {
     src: 'https://placehold.co/300x300.png',

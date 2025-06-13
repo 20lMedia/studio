@@ -1,10 +1,11 @@
 
 import { keyServicesSummary } from '@/lib/data';
 import { ServiceItem } from '@/components/services/ServiceItem';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 
 export function KeyServicesHome() {
+  if (keyServicesSummary.length === 0) {
+    return null; 
+  }
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -19,9 +20,7 @@ export function KeyServicesHome() {
             <ServiceItem key={service.id} service={service} />
           ))}
         </div>
-        <div className="text-center mt-12 md:mt-16"> {/* Increased margin */}
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground"><Link href="/services">Discover All Services</Link></Button>
-        </div>
+        {/* "Discover All Services" button removed as services page is deleted */}
       </div>
     </section>
   );

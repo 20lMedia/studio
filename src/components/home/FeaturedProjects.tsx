@@ -1,11 +1,13 @@
 
 import { projects } from '@/lib/data';
 import { ProjectCard } from '@/components/portfolio/ProjectCard';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 
 export function FeaturedProjects() {
   const featured = projects.slice(0, 3);
+
+  if (featured.length === 0) {
+    return null; // Don't render the section if there are no featured projects
+  }
 
   return (
     <section className="py-16 md:py-24 bg-secondary/50 rounded-lg my-12 md:my-16"> {/* Adjusted bg, added md:my-16 */}
@@ -21,9 +23,7 @@ export function FeaturedProjects() {
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-        <div className="text-center mt-12 md:mt-16"> {/* Increased margin */}
-          <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary hover:border-primary/70"><Link href="/portfolio">Explore All Projects</Link></Button>
-        </div>
+        {/* "Explore All Projects" button removed as portfolio page is deleted */}
       </div>
     </section>
   );
