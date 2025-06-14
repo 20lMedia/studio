@@ -39,7 +39,7 @@ export const projects: Project[] = [
     description: 'Transforming an industrial loft into a chic, contemporary living space.',
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
     imageUrl: {
-      src: 'https://placehold.co/600x400.png',
+      src: `https://source.unsplash.com/featured/600x400/?${encodeURIComponent('modern loft')}`,
       alt: 'Modern loft living space with high ceilings and contemporary furniture',
       dataAiHint: 'modern loft',
     },
@@ -48,9 +48,9 @@ export const projects: Project[] = [
     client: 'Private Residence',
     location: 'Downtown Metropolis',
     images: [
-      { src: 'https://placehold.co/800x600.png?a=1', alt: 'View of loft kitchen area', dataAiHint: 'loft kitchen' },
-      { src: 'https://placehold.co/800x600.png?a=2', alt: 'Loft bedroom with minimalist design', dataAiHint: 'minimalist bedroom' },
-      { src: 'https://placehold.co/800x600.png?a=3', alt: 'Detail of exposed brickwork in loft', dataAiHint: 'exposed brick' },
+      { src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('loft kitchen')}`, alt: 'View of loft kitchen area', dataAiHint: 'loft kitchen' },
+      { src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('minimalist bedroom')}`, alt: 'Loft bedroom with minimalist design', dataAiHint: 'minimalist bedroom' },
+      { src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('exposed brick')}`, alt: 'Detail of exposed brickwork in loft', dataAiHint: 'exposed brick' },
     ]
   },
   {
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     description: 'Elegant and inviting lobby design for a high-end boutique hotel.',
     longDescription: 'The goal for this boutique hotel lobby was to create a memorable first impression. We blended classic elegance with modern luxury, using plush velvet seating, marble accents, and statement lighting. A bespoke reception desk and curated art pieces complete the opulent yet welcoming atmosphere.',
     imageUrl: {
-      src: 'https://placehold.co/600x400.png',
+      src: `https://source.unsplash.com/featured/600x400/?${encodeURIComponent('hotel lobby')}`,
       alt: 'Elegant hotel lobby with plush seating and marble accents',
       dataAiHint: 'hotel lobby',
     },
@@ -68,8 +68,8 @@ export const projects: Project[] = [
     client: 'The Velvet Orchid Hotel',
     location: 'City Center',
      images: [
-      { src: 'https://placehold.co/800x600.png?b=1', alt: 'Hotel reception desk detail', dataAiHint: 'reception desk' },
-      { src: 'https://placehold.co/800x600.png?b=2', alt: 'Statement lighting in hotel lobby', dataAiHint: 'statement lighting' },
+      { src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('reception desk')}`, alt: 'Hotel reception desk detail', dataAiHint: 'reception desk' },
+      { src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('statement lighting')}`, alt: 'Statement lighting in hotel lobby', dataAiHint: 'statement lighting' },
     ]
   },
   {
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     description: 'A calming and clutter-free apartment embracing minimalist principles.',
     longDescription: 'This apartment design focuses on simplicity, functionality, and tranquility. We used a light color palette, natural materials like wood and linen, and clever storage solutions to maintain a clutter-free environment. The result is a peaceful haven that promotes relaxation and mindfulness.',
     imageUrl: {
-      src: 'https://placehold.co/600x400.png',
+      src: `https://source.unsplash.com/featured/600x400/?${encodeURIComponent('minimalist apartment')}`,
       alt: 'Bright and airy minimalist apartment living room',
       dataAiHint: 'minimalist apartment',
     },
@@ -87,10 +87,10 @@ export const projects: Project[] = [
     client: 'Ms. Anya Sharma',
     location: 'Riverside District',
     images: [
-      { src: 'https://placehold.co/800x600.png?c=1', alt: 'Minimalist kitchen with light wood cabinets', dataAiHint: 'minimalist kitchen' },
-      { src: 'https://placehold.co/800x600.png?c=2', alt: 'Bedroom with natural light and simple decor', dataAiHint: 'simple bedroom' },
-      { src: 'https://placehold.co/800x600.png?c=3', alt: 'Close-up of natural textures in apartment', dataAiHint: 'natural textures' },
-      { src: 'https://placehold.co/800x600.png?c=4', alt: 'View of minimalist apartment balcony', dataAiHint: 'apartment balcony' },
+      { src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('minimalist kitchen')}`, alt: 'Minimalist kitchen with light wood cabinets', dataAiHint: 'minimalist kitchen' },
+      { src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('simple bedroom')}`, alt: 'Bedroom with natural light and simple decor', dataAiHint: 'simple bedroom' },
+      { src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('natural textures')}`, alt: 'Close-up of natural textures in apartment', dataAiHint: 'natural textures' },
+      { src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('apartment balcony')}`, alt: 'View of minimalist apartment balcony', dataAiHint: 'apartment balcony' },
     ]
   },
   {
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     description: 'Dynamic and inspiring design for a modern co-working hub.',
     longDescription: 'This co-working space was designed to foster creativity and collaboration. It features a mix of private offices, open-plan work areas, and comfortable breakout zones. Bold colors, ergonomic furniture, and biophilic design elements contribute to a productive and energizing atmosphere.',
     imageUrl: {
-      src: 'https://placehold.co/600x400.png',
+      src: `https://source.unsplash.com/featured/600x400/?${encodeURIComponent('coworking space')}`,
       alt: 'Modern co-working space with colorful accents and varied seating',
       dataAiHint: 'coworking space',
     },
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     client: 'Innovate Hub',
     location: 'Tech Park',
     images: [
-      { src: 'https://placehold.co/800x600.png?d=1', alt: 'Breakout area in co-working space', dataAiHint: 'office breakout' },
+      { src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('office breakout')}`, alt: 'Breakout area in co-working space', dataAiHint: 'office breakout' },
     ]
   },
 ];
@@ -328,7 +328,7 @@ export const heroPageData: HeroPageData = {
     href: '/about', 
   },
   mainImage: {
-    src: 'https://placehold.co/600x600.png',
+    src: `https://source.unsplash.com/featured/600x600/?${encodeURIComponent('modern office interior')}`,
     alt: 'Modern interior workspace with chairs and desk',
     dataAiHint: 'modern office interior',
   },
@@ -338,14 +338,13 @@ export const heroPageData: HeroPageData = {
     href: '/about',
   },
   smallImage1: {
-    src: 'https://placehold.co/300x300.png',
+    src: `https://source.unsplash.com/featured/300x300/?${encodeURIComponent('desk lamp')}`,
     alt: 'Interior detail with lamp',
     dataAiHint: 'desk lamp',
   },
   smallImage2: {
-    src: 'https://placehold.co/300x300.png',
+    src: `https://source.unsplash.com/featured/300x300/?${encodeURIComponent('potted plants shelf')}`,
     alt: 'Interior detail with plants',
     dataAiHint: 'potted plants shelf',
   },
 };
-
