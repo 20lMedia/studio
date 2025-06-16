@@ -25,7 +25,7 @@ export function Navbar() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${isScrolled ? 'bg-background/90 backdrop-blur-lg shadow-lg' : 'bg-background/70 backdrop-blur-md'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${isScrolled ? 'bg-background/90 backdrop-blur-lg shadow-lg' : 'bg-background/90 backdrop-blur-md'}`}>
       <div className="container mx-auto px-4">
         <div className="flex h-20 md:h-24 items-center justify-between">
           <Link href="/" aria-label="Py Interiors Home" className="hover:opacity-80 transition-opacity duration-300 ease-in-out">
