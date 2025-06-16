@@ -243,7 +243,7 @@ export const keyServicesSummary: Service[] = [
 export const companyInfo = {
   email: 'contact@pyinteriors.com',
   phone: '+1 (555) 123-4567',
-  address: '123 Design Avenue, Suite 400, Metropolis, NY 10001',
+  address: 'Krishna Nagar, Puducherry, 605013',
   history: "Founded in 2010 by Jane Doe, Py Interiors began with a vision to create spaces that are not only beautiful but also deeply personal and functional. Over the past decade, we've grown into a renowned design studio, recognized for our commitment to quality, innovation, and client satisfaction. Our portfolio spans luxurious residences, dynamic commercial spaces, and everything in between.",
   mission: "Our mission is to transform ordinary spaces into extraordinary experiences. We strive to understand our clients' visions and bring them to life through thoughtful design, meticulous attention to detail, and a passion for creating environments that inspire and delight. We believe that good design has the power to enhance well-being and reflect individuality.",
   values: "Our core values are creativity, integrity, and client-centricity. We believe in pushing design boundaries while maintaining ethical practices and always putting our clients' needs first. Collaboration and open communication are key to our process.",
@@ -254,14 +254,14 @@ export const globalCtaContactInfo = {
   address: "Krishna Nagar, Puducherry, 605013",
   phoneNumbers: ["091593 22233"],
   email: "fillers@example.com",
-  businessHours: [ // This data is now unused by GlobalCtaSection but kept for potential future use
+  businessHours: [ 
     { day: "Monday - Saturday", time: "9:00 AM - 9:00 PM" },
   ],
   icons: {
     address: MapPin,
     phone: Phone,
     email: Mail,
-    hours: Clock, // This icon is now unused by GlobalCtaSection
+    hours: Clock, 
   }
 };
 
@@ -371,4 +371,3 @@ export const heroPageData: HeroPageData = {
   },
 };
     
-
