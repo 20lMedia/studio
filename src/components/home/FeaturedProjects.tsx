@@ -1,6 +1,9 @@
 
 import { projects } from '@/lib/data';
 import { ProjectCard } from '@/components/portfolio/ProjectCard';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export function FeaturedProjects() {
   const featured = projects.slice(0, 3);
@@ -23,8 +26,16 @@ export function FeaturedProjects() {
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-        {/* "Explore All Projects" button removed as portfolio page is deleted */}
+        <div className="text-center mt-12 md:mt-16">
+          <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary hover:border-primary/70 px-8 py-3 text-base rounded-md">
+            <Link href="/portfolio">
+              Explore All Projects <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
 }
+
+    

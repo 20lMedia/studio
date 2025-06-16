@@ -1,3 +1,4 @@
+
 import { projects } from '@/lib/data';
 import { ProjectGrid } from '@/components/portfolio/ProjectGrid';
 
@@ -17,3 +18,5 @@ export default function PortfolioPage() {
     </div>
   );
 }
+
+    

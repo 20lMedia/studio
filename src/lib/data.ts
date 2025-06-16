@@ -1,6 +1,6 @@
 
 import type { Icon } from 'lucide-react';
-import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote } from 'lucide-react';
+import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote, GalleryVertical } from 'lucide-react';
 
 export type NavLink = {
   href: string;
@@ -11,6 +11,7 @@ export type NavLink = {
 export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/portfolio', label: 'Portfolio' },
 ];
 
 export type ImageObject = {
@@ -348,3 +349,5 @@ export const heroPageData: HeroPageData = {
     dataAiHint: 'potted plants shelf',
   },
 };
+
+    

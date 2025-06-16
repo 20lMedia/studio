@@ -1,3 +1,4 @@
+
 import type { Project } from '@/lib/data';
 import { ProjectCard } from './ProjectCard';
 
@@ -18,3 +19,5 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
     </div>
   );
 }
+
+    
