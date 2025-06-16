@@ -1,6 +1,6 @@
 
 import type { Icon } from 'lucide-react';
-import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote, GalleryVertical } from 'lucide-react';
+import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote, GalleryVertical, Leaf, Award, MessageSquare } from 'lucide-react';
 
 export type NavLink = {
   href: string;
@@ -12,9 +12,10 @@ export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
+  { href: '/why-choose-us', label: 'Why Choose Us' },
 ];
 
-const placeholderGeneratedImageSrc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
+const placeholderGeneratedImageSrc = "https://placehold.co/1x1.png"; // Smallest possible valid data URI for a transparent pixel
 
 export type ImageObject = {
   src: string;
@@ -263,6 +264,41 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     icon: Users,
   },
 ];
+
+export type WhyChooseUsPageItem = {
+  id: string;
+  title: string;
+  description: string;
+  icon: Icon;
+};
+
+export const whyChooseUsPageItems: WhyChooseUsPageItem[] = [
+  {
+    id: 'personalized-design',
+    title: 'Truly Personalized Design',
+    description: "We dive deep into your vision, lifestyle, and aspirations. Our design process is centered around you, creating spaces that are a true reflection of your personality and needs, not just a trend.",
+    icon: Users,
+  },
+  {
+    id: 'sustainable-sourcing',
+    title: 'Sustainable & Ethical Sourcing',
+    description: "We are committed to responsible design. We prioritize sourcing sustainable materials, eco-friendly products, and working with artisans who share our ethical values, creating beautiful spaces that are kind to the planet.",
+    icon: Leaf,
+  },
+  {
+    id: 'collaborative-journey',
+    title: 'A Collaborative Journey',
+    description: "Your voice matters every step of the way. We believe in transparent communication and a partnership approach, ensuring you're involved and informed from the initial concept to the final reveal.",
+    icon: MessageSquare, 
+  },
+  {
+    id: 'award-winning-excellence',
+    title: 'Award-Winning Excellence',
+    description: "Our portfolio speaks for itself, showcasing a diverse range of successful projects and satisfied clients. Our commitment to quality and innovative design has been recognized by industry awards.",
+    icon: Award,
+  },
+];
+
 
 export type Testimonial = {
   id: string;
