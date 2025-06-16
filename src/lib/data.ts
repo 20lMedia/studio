@@ -1,6 +1,6 @@
 
 import type { Icon } from 'lucide-react';
-import { Home, Briefcase, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote, GalleryVertical, ArrowRight } from 'lucide-react';
+import { Home, Briefcase, Sofa, Wrench, Users, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, ArrowRight } from 'lucide-react';
 
 export type NavLink = {
   href: string;
@@ -264,6 +264,7 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
   },
 ];
 
+
 export type Testimonial = {
   id: string;
   quote: string;
@@ -324,8 +325,8 @@ export const heroPageData: HeroPageData = {
     icon: Sparkles,
   },
   mainHeadline: {
-    line1: 'Crafting',
-    line2: 'Modern Spaces',
+    line1: 'Modern Interior',
+    line2: 'Design Studio',
   },
   mainParagraph: 'Specialized in Modular Kitchens, Mica Works & Wardrobe Works. Transforming homes with contemporary design and premium craftsmanship in Puducherry.',
   mainCta: {
@@ -334,7 +335,7 @@ export const heroPageData: HeroPageData = {
     icon: ArrowRight,
   },
   mainImage: {
-    src: 'https://placehold.co/600x600.png',
+    src: 'https://placehold.co/584x584.png', // Updated image size
     alt: 'Modern teal kitchen cabinets with white countertops',
     dataAiHint: 'modern kitchen teal cabinets',
   },

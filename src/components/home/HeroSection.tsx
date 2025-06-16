@@ -42,7 +42,7 @@ export function HeroSection() {
           </div>
 
           {/* Image Column */}
-          <div className="relative h-[450px] sm:h-[550px] md:h-[600px] lg:h-[600px] rounded-lg overflow-hidden shadow-xl order-last md:order-last">
+          <div className="relative h-[400px] sm:h-[500px] md:h-[584px] lg:h-[584px] rounded-lg overflow-hidden shadow-xl order-last md:order-last">
             <Image
               src={heroPageData.mainImage.src}
               alt={heroPageData.mainImage.alt}
