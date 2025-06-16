@@ -11,7 +11,7 @@ export function HeroSection() {
   const CtaIcon = heroPageData.mainCta.icon;
 
   return (
-    <section className="pt-16 md:pt-20 pb-8 md:pb-10">
+    <section className="pb-8 md:pb-10">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content Column */}
@@ -58,4 +58,3 @@ export function HeroSection() {
     </section>
   );
 }
-
