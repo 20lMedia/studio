@@ -4,6 +4,7 @@ import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import { GlobalCtaSection } from '@/components/layout/GlobalCtaSection';
 
 export const metadata: Metadata = {
   title: 'Py Interiors - Sophisticated Interior Design',
@@ -26,9 +27,10 @@ export default function RootLayout({
       <body className="font-body antialiased">
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <main className="flex-grow container mx-auto px-4 pt-20 pb-12 md:pt-24 md:pb-16"> {/* Adjusted top padding */}
+          <main className="flex-grow container mx-auto px-4 pt-20 pb-12 md:pt-24 md:pb-16">
             {children}
           </main>
+          <GlobalCtaSection />
           <Footer />
         </div>
         <Toaster />

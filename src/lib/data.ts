@@ -1,6 +1,6 @@
 
 import type { Icon } from 'lucide-react';
-import { Home, Briefcase, Sofa, Wrench, Users, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, ArrowRight } from 'lucide-react';
+import { Home, Briefcase, Sofa, Wrench, Users, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, ArrowRight, MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export type NavLink = {
   href: string;
@@ -143,7 +143,7 @@ export const services: Service[] = [
     id: 'space-planning',
     title: 'Space Planning & Optimization',
     description: 'Maximizing the potential of your space with intelligent layout solutions.',
-    icon: Users, // Changed from LayoutGrid as it's removed. Using Users as a placeholder, can be updated.
+    icon: Users, 
     startingPrice: '$2,000',
   },
   {
@@ -168,6 +168,20 @@ export const services: Service[] = [
     startingPrice: '$500',
   }
 ];
+
+export const serviceOptionsForClient: Array<{ id: string; title: string; }> = services.map(
+  (service) => ({
+    id: service.id,
+    title: service.title,
+  })
+);
+
+// This ensures Zod's `enum` gets a non-empty array typed as [string, ...string[]]
+const serviceIdsForZod = services.map(s => s.id);
+export const zodServiceEnumValues: [string, ...string[]] = serviceIdsForZod.length > 0 
+  ? [serviceIdsForZod[0], ...serviceIdsForZod.slice(1)] 
+  : (() => { throw new Error("services array cannot be empty for Zod enum generation"); })();
+
 
 export type TeamMember = {
   id: string;
@@ -235,6 +249,23 @@ export const companyInfo = {
   values: "Our core values are creativity, integrity, and client-centricity. We believe in pushing design boundaries while maintaining ethical practices and always putting our clients' needs first. Collaboration and open communication are key to our process.",
   approach: "Our design approach is holistic and collaborative. We start by deeply understanding your aspirations and lifestyle. Then, we meticulously plan every detail, from space optimization to material selection, ensuring a cohesive and harmonious result. We manage projects with precision, ensuring they are delivered on time and within budget."
 };
+
+export const globalCtaContactInfo = {
+  address: "288, Bhagat Singh Street, Naveena Garden, Puducherry, 605013",
+  phoneNumbers: ["+91 98436 00607", "+91 98436 00662", "+0413 2910607"],
+  email: "srilakshmiinteriors1@gmail.com",
+  businessHours: [
+    { day: "Monday - Saturday", time: "9:00 AM - 9:00 PM" },
+    // Add Sunday if needed, e.g.: { day: "Sunday", time: "10:00 AM - 5:00 PM" }
+  ],
+  icons: {
+    address: MapPin,
+    phone: Phone,
+    email: Mail,
+    hours: Clock,
+  }
+};
+
 
 export type WhyChooseUsItem = {
   id: string;
@@ -335,7 +366,7 @@ export const heroPageData: HeroPageData = {
     icon: ArrowRight,
   },
   mainImage: {
-    src: 'https://placehold.co/584x584.png', // Updated image size
+    src: 'https://placehold.co/584x584.png', 
     alt: 'Modern teal kitchen cabinets with white countertops',
     dataAiHint: 'modern kitchen teal cabinets',
   },
