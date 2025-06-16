@@ -9,6 +9,15 @@ export function HeroSection() {
     <section className="py-10 md:py-12"> {/* Adjusted padding */}
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-5 gap-8 lg:gap-12 items-center mb-16 md:mb-24"> {/* Increased gap and bottom margin */}
+          <div className="md:col-span-2 text-left md:pr-8"> {/* Changed from md:pl-8 to md:pr-8 due to swap */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline mb-6 text-foreground leading-tight">
+              {heroPageData.mainHeadline.line1}<br />{heroPageData.mainHeadline.line2}
+            </h1>
+            <p className="text-base text-muted-foreground mb-8 max-w-prose">
+              {heroPageData.mainParagraph}
+            </p>
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-3 text-base font-semibold rounded-md"><Link href={heroPageData.mainCta.href}>{heroPageData.mainCta.text}</Link></Button>
+          </div>
           <div className="md:col-span-3 relative h-[350px] sm:h-[500px] md:h-[600px] lg:h-[600px] rounded-lg overflow-hidden shadow-lg"> {/* Added shadow, updated lg height */}
             <Image
               src={heroPageData.mainImage.src}
@@ -18,15 +27,6 @@ export function HeroSection() {
               data-ai-hint={heroPageData.mainImage.dataAiHint}
               priority
             />
-          </div>
-          <div className="md:col-span-2 text-left md:pl-8">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline mb-6 text-foreground leading-tight">
-              {heroPageData.mainHeadline.line1}<br />{heroPageData.mainHeadline.line2}
-            </h1>
-            <p className="text-base text-muted-foreground mb-8 max-w-prose">
-              {heroPageData.mainParagraph}
-            </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-3 text-base font-semibold rounded-md"><Link href={heroPageData.mainCta.href}>{heroPageData.mainCta.text}</Link></Button>
           </div>
         </div>
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-start">
@@ -53,3 +53,4 @@ export function HeroSection() {
 }
 
     
+
