@@ -23,10 +23,15 @@ export function MarqueeSection() {
 
   return (
     <section className="w-full relative flex overflow-x-hidden pt-2 pb-4 md:pt-3 md:pb-6 bg-secondary group">
-      {/* This block starts off-screen to the left and moves into view, then continues right */}
-      <div className="animate-marquee2-right whitespace-nowrap group-hover:[animation-play-state:paused]" aria-hidden="true">
+      {/* This div starts in view and moves to the right, then repeats */}
+      <div className="animate-marquee-right whitespace-nowrap group-hover:[animation-play-state:paused] flex-shrink-0">
+        {renderMarqueeContent()}
+      </div>
+      {/* This div starts off-screen to the left and moves into view, following the first one to create a seamless loop */}
+      <div className="absolute top-0 left-0 animate-marquee2-right whitespace-nowrap group-hover:[animation-play-state:paused] flex-shrink-0 pt-2 pb-4 md:pt-3 md:pb-6">
         {renderMarqueeContent()}
       </div>
     </section>
   );
 }
+

@@ -89,11 +89,11 @@ export default {
             height: '0',
           },
         },
-        'marquee-right': { // For the block that starts in view and moves right
+        'marquee-right': { 
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(100%)' }, // Moves one full content width to the right
+          '100%': { transform: 'translateX(100%)' }, 
         },
-        'marquee2-right': { // For the block that starts left (hidden) and moves into view from left, following the first
+        'marquee2-right': { 
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
@@ -108,3 +108,4 @@ export default {
   },
   plugins: [require('tailwindcss-animate')],
 } satisfies Config;
+
