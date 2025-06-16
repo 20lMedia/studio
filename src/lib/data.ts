@@ -1,6 +1,6 @@
 
 import type { Icon } from 'lucide-react';
-import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote, GalleryVertical, Layers, Archive, ArrowRight } from 'lucide-react';
+import { Home, Briefcase, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote, GalleryVertical, ArrowRight } from 'lucide-react';
 
 export type NavLink = {
   href: string;
@@ -143,7 +143,7 @@ export const services: Service[] = [
     id: 'space-planning',
     title: 'Space Planning & Optimization',
     description: 'Maximizing the potential of your space with intelligent layout solutions.',
-    icon: LayoutGrid,
+    icon: Users, // Changed from LayoutGrid as it's removed. Using Users as a placeholder, can be updated.
     startingPrice: '$2,000',
   },
   {
@@ -300,12 +300,6 @@ export const testimonialsData: Testimonial[] = [
   },
 ];
 
-export type HeroKeyServiceLink = {
-  text: string;
-  icon: Icon;
-  href: string;
-};
-
 export type HeroPageData = {
   tagline: {
     text: string;
@@ -321,7 +315,6 @@ export type HeroPageData = {
     href: string;
     icon?: Icon;
   };
-  keyServiceLinks: HeroKeyServiceLink[];
   mainImage: ImageObject;
 };
 
@@ -331,8 +324,8 @@ export const heroPageData: HeroPageData = {
     icon: Sparkles,
   },
   mainHeadline: {
-    line1: 'Modern Interior',
-    line2: 'Design Studio',
+    line1: 'Crafting',
+    line2: 'Modern Spaces',
   },
   mainParagraph: 'Specialized in Modular Kitchens, Mica Works & Wardrobe Works. Transforming homes with contemporary design and premium craftsmanship in Puducherry.',
   mainCta: {
@@ -340,11 +333,6 @@ export const heroPageData: HeroPageData = {
     href: '/portfolio',
     icon: ArrowRight,
   },
-  keyServiceLinks: [
-    { text: 'Modular Kitchen', icon: LayoutGrid, href: '/portfolio' },
-    { text: 'Mica Works', icon: Layers, href: '/portfolio' },
-    { text: 'Wardrobe Works', icon: Archive, href: '/portfolio' },
-  ],
   mainImage: {
     src: 'https://placehold.co/600x600.png',
     alt: 'Modern teal kitchen cabinets with white countertops',

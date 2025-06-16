@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { heroPageData } from '@/lib/data';
-import { Badge } from '@/components/ui/badge'; // For the tagline
+import { Badge } from '@/components/ui/badge'; 
 import type { Icon } from 'lucide-react';
 
 export function HeroSection() {
@@ -15,7 +15,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content Column */}
-          <div className="flex flex-col items-start text-left space-y-6 md:space-y-8">
+          <div className="flex flex-col items-start text-left space-y-6 md:space-y-8 order-first md:order-first">
             {heroPageData.tagline && (
               <Badge variant="outline" className="py-1 px-3 border-primary/30 text-primary bg-primary/5">
                 <TaglineIcon className="mr-2 h-4 w-4" />
@@ -32,22 +32,6 @@ export function HeroSection() {
             <p className="text-base text-muted-foreground max-w-prose">
               {heroPageData.mainParagraph}
             </p>
-
-            {heroPageData.keyServiceLinks && heroPageData.keyServiceLinks.length > 0 && (
-              <div className="flex flex-wrap gap-3 pt-2">
-                {heroPageData.keyServiceLinks.map((link) => {
-                  const ServiceIcon = link.icon as Icon; // Type assertion
-                  return (
-                    <Button key={link.text} asChild variant="outline" size="sm" className="text-foreground/80 hover:bg-accent/50 hover:text-primary border-border">
-                      <Link href={link.href}>
-                        <ServiceIcon className="mr-2 h-4 w-4" />
-                        {link.text}
-                      </Link>
-                    </Button>
-                  );
-                })}
-              </div>
-            )}
             
             <Button asChild size="lg" className="bg-foreground hover:bg-foreground/80 text-background px-8 py-3 text-base font-semibold rounded-md mt-4">
               <Link href={heroPageData.mainCta.href}>
@@ -58,7 +42,7 @@ export function HeroSection() {
           </div>
 
           {/* Image Column */}
-          <div className="relative h-[450px] sm:h-[550px] md:h-[600px] lg:h-[700px] rounded-lg overflow-hidden shadow-xl order-first md:order-last">
+          <div className="relative h-[450px] sm:h-[550px] md:h-[600px] lg:h-[600px] rounded-lg overflow-hidden shadow-xl order-last md:order-last">
             <Image
               src={heroPageData.mainImage.src}
               alt={heroPageData.mainImage.alt}
