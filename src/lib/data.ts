@@ -174,7 +174,7 @@ export type TeamMember = {
   name: string;
   role: string;
   bio: string;
-  imageUrl: string; 
+  imageUrl: string;
   dataAiHint?: string;
 };
 
@@ -269,7 +269,7 @@ export type Testimonial = {
   quote: string;
   author: string;
   role: string;
-  imageUrl?: string; 
+  imageUrl?: string;
   dataAiHint?: string;
 };
 
@@ -310,14 +310,14 @@ export type HeroPageData = {
     text: string;
     href: string;
   };
-  mainImage: ImageObject; 
+  mainImage: ImageObject;
   secondaryHeadline: string;
   secondaryLink: {
     text: string;
     href: string;
   };
-  smallImage1: ImageObject; 
-  smallImage2: ImageObject; 
+  smallImage1: ImageObject;
+  smallImage2: ImageObject;
 };
 
 export const heroPageData: HeroPageData = {
@@ -328,7 +328,7 @@ export const heroPageData: HeroPageData = {
   mainParagraph: 'Make the most of compact spaces with space saving furniture that are ingenuous and innovative. Transform your living spaces with interior designs.',
   mainCta: {
     text: 'EXPLORE NOW',
-    href: '/about', 
+    href: '/about',
   },
   mainImage: {
     src: 'https://placehold.co/600x600.png',
@@ -337,7 +337,7 @@ export const heroPageData: HeroPageData = {
   },
   secondaryHeadline: 'We will make these unique tastes of yours a design reality!',
   secondaryLink: {
-    text: 'Learn About Py Interiors', 
+    text: 'Learn About Py Interiors',
     href: '/about',
   },
   smallImage1: {
@@ -351,5 +351,4 @@ export const heroPageData: HeroPageData = {
     dataAiHint: 'potted plants shelf',
   },
 };
-
     
