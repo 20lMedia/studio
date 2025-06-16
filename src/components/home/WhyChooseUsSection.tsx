@@ -31,7 +31,7 @@ export function WhyChooseUsSection() {
             We are dedicated to creating spaces that are not just beautiful, but also reflect your personality and enhance your lifestyle.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10"> {/* Increased gap */}
+        <div className="max-w-3xl mx-auto space-y-10 md:space-y-12"> {/* Changed to a centered, single-column layout */}
           {whyChooseUsItems.map((item) => (
             <BenefitCard key={item.id} item={item} />
           ))}
@@ -40,3 +40,4 @@ export function WhyChooseUsSection() {
     </section>
   );
 }
+
