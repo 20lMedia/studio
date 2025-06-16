@@ -1,29 +1,30 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { whyChooseUsItems, type WhyChooseUsItem } from "@/lib/data";
+import type { Icon } from "lucide-react";
 
 function BenefitCard({ item }: { item: WhyChooseUsItem }) {
   const IconComponent = item.icon;
   return (
-    <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out h-full bg-card rounded-lg"> {/* Ensured bg-card and rounded-lg */}
-      <CardHeader className="pt-8"> {/* Increased padding top */}
-        <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4 border border-primary/30">
-          <IconComponent className="h-8 w-8 text-primary" />
+    <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out bg-card rounded-lg">
+      <div className="flex items-start p-6 md:p-8 space-x-4 md:space-x-6">
+        <div className="flex-shrink-0 bg-primary/10 p-3 md:p-4 rounded-full w-fit border border-primary/20 mt-1">
+          <IconComponent className="h-6 w-6 md:h-7 md:w-7 text-primary" />
         </div>
-        <CardTitle className="text-xl font-headline">{item.title}</CardTitle>
-      </CardHeader>
-      <CardContent className="pb-8"> {/* Increased padding bottom */}
-        <p className="text-sm text-muted-foreground">{item.description}</p>
-      </CardContent>
+        <div className="flex-grow">
+          <h3 className="text-lg md:text-xl font-headline font-semibold mb-1 text-foreground">{item.title}</h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+        </div>
+      </div>
     </Card>
   );
 }
 
 export function WhyChooseUsSection() {
   return (
-    <section className="py-16 md:py-24 bg-secondary/50 rounded-lg my-12 md:my-16"> {/* Adjusted bg, added md:my-16 */}
+    <section className="py-16 md:py-24 bg-secondary/50 rounded-lg my-12 md:my-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16"> {/* Added wrapper for text and increased margin */}
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">
             Why Choose Py Interiors?
           </h2>
@@ -31,7 +32,7 @@ export function WhyChooseUsSection() {
             We are dedicated to creating spaces that are not just beautiful, but also reflect your personality and enhance your lifestyle.
           </p>
         </div>
-        <div className="max-w-3xl mx-auto space-y-10 md:space-y-12"> {/* Changed to a centered, single-column layout */}
+        <div className="max-w-3xl mx-auto space-y-8 md:space-y-10"> {/* Adjusted spacing between cards slightly */}
           {whyChooseUsItems.map((item) => (
             <BenefitCard key={item.id} item={item} />
           ))}
@@ -40,4 +41,3 @@ export function WhyChooseUsSection() {
     </section>
   );
 }
-
