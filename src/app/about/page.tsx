@@ -9,20 +9,6 @@ export default function AboutPage() {
   return (
     <div className="space-y-16 md:space-y-24">
 
-      <section className="text-center py-12 md:py-16 bg-secondary/30 rounded-lg shadow-lg">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline mb-6 text-foreground">
-            Ready to Start Your Dream Project?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Let&apos;s discuss how Py Interiors can transform your space. We&apos;re excited to learn about your ideas and help bring your vision to life.
-          </p>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-3 text-base font-semibold rounded-md">
-            <Link href="/portfolio">Explore Our Work</Link>
-          </Button>
-        </div>
-      </section>
-
       <section className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-6">About Py Interiors</h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
