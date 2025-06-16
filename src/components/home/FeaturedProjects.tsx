@@ -13,7 +13,7 @@ export function FeaturedProjects() {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-secondary/50 rounded-lg my-12 md:my-16"> {/* Adjusted bg, added md:my-16 */}
+    <section className="py-16 md:py-24 bg-secondary/50 rounded-lg"> {/* Adjusted bg, removed md:my-16 */}
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16"> {/* Added wrapper for text and increased margin */}
           <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">Featured Projects</h2>
