@@ -89,10 +89,20 @@ export default {
             height: '0',
           },
         },
+        'marquee-right': { // For the block that starts in view and moves right
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(100%)' }, // Moves one full content width to the right
+        },
+        'marquee2-right': { // For the block that starts left (hidden) and moves into view from left, following the first
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'marquee-right': 'marquee-right 45s linear infinite',
+        'marquee2-right': 'marquee2-right 45s linear infinite',
       },
     },
   },
