@@ -27,11 +27,6 @@ export function MarqueeSection() {
       <div className="animate-marquee2-right whitespace-nowrap group-hover:[animation-play-state:paused]" aria-hidden="true">
         {renderMarqueeContent()}
       </div>
-      {/* This block starts in view and moves right, eventually off-screen. It's positioned absolutely to sit on top initially, ensuring the 'marquee2-right' can seamlessly follow. */}
-      <div className="absolute top-0 animate-marquee-right whitespace-nowrap group-hover:[animation-play-state:paused]">
-        {renderMarqueeContent()}
-      </div>
     </section>
   );
 }
-
