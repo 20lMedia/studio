@@ -254,15 +254,14 @@ export const globalCtaContactInfo = {
   address: "Krishna Nagar, Puducherry, 605013",
   phoneNumbers: ["091593 22233"],
   email: "fillers@example.com",
-  businessHours: [
+  businessHours: [ // This data is now unused by GlobalCtaSection but kept for potential future use
     { day: "Monday - Saturday", time: "9:00 AM - 9:00 PM" },
-    // Add Sunday if needed, e.g.: { day: "Sunday", time: "10:00 AM - 5:00 PM" }
   ],
   icons: {
     address: MapPin,
     phone: Phone,
     email: Mail,
-    hours: Clock,
+    hours: Clock, // This icon is now unused by GlobalCtaSection
   }
 };
 
@@ -372,3 +371,4 @@ export const heroPageData: HeroPageData = {
   },
 };
     
+

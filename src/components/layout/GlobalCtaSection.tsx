@@ -8,7 +8,7 @@ export function GlobalCtaSection() {
   const AddressIcon = globalCtaContactInfo.icons.address;
   const PhoneIcon = globalCtaContactInfo.icons.phone;
   const EmailIcon = globalCtaContactInfo.icons.email;
-  const HoursIcon = globalCtaContactInfo.icons.hours;
+  // HoursIcon is no longer needed
 
   return (
     <section className="bg-background py-16 md:py-24">
@@ -61,17 +61,7 @@ export function GlobalCtaSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg rounded-lg bg-foreground text-background">
-              <CardHeader className="flex flex-row items-center space-x-4 p-5">
-                <HoursIcon className="h-8 w-8 text-primary flex-shrink-0" />
-                <CardTitle className="text-xl font-headline">Business Hours</CardTitle>
-              </CardHeader>
-              <CardContent className="p-5 pt-0 space-y-1">
-                {globalCtaContactInfo.businessHours.map((item, index) => (
-                  <p key={index} className="text-sm">{item.day}: {item.time}</p>
-                ))}
-              </CardContent>
-            </Card>
+            {/* Business Hours Card Removed */}
           </div>
 
           {/* Right Column: Form */}
@@ -85,3 +75,4 @@ export function GlobalCtaSection() {
     </section>
   );
 }
+
