@@ -253,7 +253,7 @@ export const companyInfo = {
 export const globalCtaContactInfo = {
   address: "Krishna Nagar, Puducherry, 605013",
   phoneNumbers: ["091593 22233"],
-  email: "srilakshmiinteriors1@gmail.com",
+  email: "fillers@example.com",
   businessHours: [
     { day: "Monday - Saturday", time: "9:00 AM - 9:00 PM" },
     // Add Sunday if needed, e.g.: { day: "Sunday", time: "10:00 AM - 5:00 PM" }
