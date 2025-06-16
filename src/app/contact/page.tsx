@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { ContactForm } from '@/components/contact/ContactForm';
 import { companyInfo } from '@/lib/data';
@@ -76,6 +77,25 @@ export default function ContactPage() {
               </div>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      <section className="text-center">
+        <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">Find Us on the Map</h2>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+          Visit us at our location or find us easily on Google Maps.
+        </p>
+        <div className="aspect-video max-w-5xl mx-auto bg-muted rounded-lg shadow-xl border border-border overflow-hidden">
+          <iframe
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(companyInfo.address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+            width="100%"
+            height="100%"
+            className="border-0"
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Company Location Map for Py Interiors"
+          ></iframe>
         </div>
       </section>
     </div>
