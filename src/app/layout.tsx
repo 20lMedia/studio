@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className="font-body antialiased">
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <main className="flex-grow container mx-auto px-4 py-12 md:py-16"> {/* Increased vertical padding */}
+          <main className="flex-grow container mx-auto px-4 pt-24 pb-12 md:pt-28 md:pb-16"> {/* Increased top padding */}
             {children}
           </main>
           <Footer />
