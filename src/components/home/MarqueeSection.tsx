@@ -22,7 +22,7 @@ export function MarqueeSection() {
   );
 
   return (
-    <section className="w-full relative flex overflow-x-hidden py-4 md:py-6 bg-secondary/20 group border-y border-border">
+    <section className="w-full relative flex overflow-x-hidden py-4 md:py-6 bg-secondary group">
       {/* This block starts off-screen to the left and moves into view, then continues right */}
       <div className="py-2 animate-marquee2-right whitespace-nowrap group-hover:[animation-play-state:paused]" aria-hidden="true">
         {renderMarqueeContent()}
@@ -34,3 +34,4 @@ export function MarqueeSection() {
     </section>
   );
 }
+
