@@ -6,17 +6,15 @@ import type { Icon } from "lucide-react";
 function BenefitCard({ item }: { item: WhyChooseUsItem }) {
   const IconComponent = item.icon;
   return (
-    <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out bg-card rounded-lg">
-      <div className="flex items-start p-6 md:p-8 space-x-4 md:space-x-6">
-        <div className="flex-shrink-0 bg-primary/10 p-3 md:p-4 rounded-full w-fit border border-primary/20 mt-1">
-          <IconComponent className="h-6 w-6 md:h-7 md:w-7 text-primary" />
-        </div>
-        <div className="flex-grow">
-          <h3 className="text-lg md:text-xl font-headline font-semibold mb-1 text-foreground">{item.title}</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-        </div>
+    <div className="flex items-start space-x-4 md:space-x-6"> {/* Removed Card wrapper and its classes, removed p-6/p-8 */}
+      <div className="flex-shrink-0 bg-primary/10 p-3 md:p-4 rounded-full w-fit border border-primary/20 mt-1">
+        <IconComponent className="h-6 w-6 md:h-7 md:w-7 text-primary" />
       </div>
-    </Card>
+      <div className="flex-grow">
+        <h3 className="text-lg md:text-xl font-headline font-semibold mb-1 text-foreground">{item.title}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+      </div>
+    </div>
   );
 }
 
@@ -32,7 +30,7 @@ export function WhyChooseUsSection() {
             We are dedicated to creating spaces that are not just beautiful, but also reflect your personality and enhance your lifestyle.
           </p>
         </div>
-        <div className="max-w-3xl mx-auto space-y-8 md:space-y-10"> {/* Adjusted spacing between cards slightly */}
+        <div className="max-w-3xl mx-auto space-y-8 md:space-y-10"> {/* This provides vertical spacing */}
           {whyChooseUsItems.map((item) => (
             <BenefitCard key={item.id} item={item} />
           ))}
@@ -41,3 +39,4 @@ export function WhyChooseUsSection() {
     </section>
   );
 }
+
