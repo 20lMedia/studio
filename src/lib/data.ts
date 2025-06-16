@@ -308,11 +308,11 @@ export type Testimonial = {
 export const testimonialsData: Testimonial[] = [
   {
     id: 'testimonial-1',
-    quote: "Py Interiors transformed our outdated living room into a modern masterpiece. Their attention to detail and creative vision were outstanding. We couldn't be happier!",
-    author: 'Alex & Jamie P.',
-    role: 'Homeowners, Willow Creek',
+    quote: "I had given them my new house kitchen interior works and they done a fabulous job and completed the project before the advised schedule at a more competitive cost. Mr. Arivan was great to work with! and explained clearly about the project and answered our queries patiently fom start to completion of the project! I would give them 5 stars and recommend to anyone for whole house interior works!",
+    author: 'Bala Murugan',
+    role: 'Client',
     imageUrl: placeholderGeneratedImageSrc,
-    dataAiHint: 'happy couple',
+    dataAiHint: 'client review',
   },
   {
     id: 'testimonial-2',
