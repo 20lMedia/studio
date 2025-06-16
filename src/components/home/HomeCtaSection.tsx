@@ -15,10 +15,11 @@ export function HomeCtaSection() {
         <Button
           asChild
           size="lg"
-          variant="outline"
-          className="bg-background text-foreground hover:bg-background/90 border-transparent px-12 py-3 text-base font-semibold rounded-md hover:shadow-lg" /* Adjusted px, rounded, added hover shadow */
+          // variant="outline" // Removed to ensure explicit classes take precedence for styling
+          className="bg-background text-foreground hover:bg-background/90 border-transparent px-12 py-3 text-base font-semibold rounded-md shadow-sm hover:shadow-lg" /* Ensured explicit light bg, dark text, and shadows */
         ><Link href="/about">Learn About Us</Link></Button> 
       </div>
     </section>
   );
 }
+
