@@ -24,11 +24,11 @@ export function MarqueeSection() {
   return (
     <section className="w-full relative flex overflow-x-hidden py-4 md:py-6 bg-secondary group">
       {/* This block starts off-screen to the left and moves into view, then continues right */}
-      <div className="py-2 animate-marquee2-right whitespace-nowrap group-hover:[animation-play-state:paused]" aria-hidden="true">
+      <div className="animate-marquee2-right whitespace-nowrap group-hover:[animation-play-state:paused]" aria-hidden="true">
         {renderMarqueeContent()}
       </div>
       {/* This block starts in view and moves right, eventually off-screen. It's positioned absolutely to sit on top initially, ensuring the 'marquee2-right' can seamlessly follow. */}
-      <div className="absolute top-0 py-2 animate-marquee-right whitespace-nowrap group-hover:[animation-play-state:paused]">
+      <div className="absolute top-0 animate-marquee-right whitespace-nowrap group-hover:[animation-play-state:paused]">
         {renderMarqueeContent()}
       </div>
     </section>
