@@ -331,7 +331,7 @@ export const heroPageData: HeroPageData = {
     href: '/about', 
   },
   mainImage: {
-    src: placeholderGeneratedImageSrc,
+    src: 'https://placehold.co/600x600.png',
     alt: 'Modern interior workspace with chairs and desk',
     dataAiHint: 'modern office interior',
   },
@@ -341,12 +341,12 @@ export const heroPageData: HeroPageData = {
     href: '/about',
   },
   smallImage1: {
-    src: placeholderGeneratedImageSrc,
+    src: 'https://placehold.co/300x300.png',
     alt: 'Interior detail with lamp',
     dataAiHint: 'desk lamp',
   },
   smallImage2: {
-    src: placeholderGeneratedImageSrc,
+    src: 'https://placehold.co/300x300.png',
     alt: 'Interior detail with plants',
     dataAiHint: 'potted plants shelf',
   },
