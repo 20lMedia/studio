@@ -251,8 +251,8 @@ export const companyInfo = {
 };
 
 export const globalCtaContactInfo = {
-  address: "288, Bhagat Singh Street, Naveena Garden, Puducherry, 605013",
-  phoneNumbers: ["+91 98436 00607", "+91 98436 00662", "+0413 2910607"],
+  address: "Krishna Nagar, Puducherry, 605013",
+  phoneNumbers: ["091593 22233", "+91 98436 00662", "+0413 2910607"],
   email: "srilakshmiinteriors1@gmail.com",
   businessHours: [
     { day: "Monday - Saturday", time: "9:00 AM - 9:00 PM" },
@@ -372,3 +372,4 @@ export const heroPageData: HeroPageData = {
   },
 };
     
+
