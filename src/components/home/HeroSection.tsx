@@ -3,22 +3,62 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { heroPageData } from '@/lib/data';
+import { Badge } from '@/components/ui/badge'; // For the tagline
+import type { Icon } from 'lucide-react';
 
 export function HeroSection() {
+  const TaglineIcon = heroPageData.tagline.icon;
+  const CtaIcon = heroPageData.mainCta.icon;
+
   return (
-    <section className="py-10 md:py-12"> {/* Adjusted padding */}
+    <section className="py-16 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-5 gap-8 lg:gap-12 items-center mb-16 md:mb-24"> {/* Increased gap and bottom margin */}
-          <div className="md:col-span-2 text-left md:pr-8"> {/* Changed from md:pl-8 to md:pr-8 due to swap */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline mb-6 text-foreground leading-tight">
-              {heroPageData.mainHeadline.line1}<br />{heroPageData.mainHeadline.line2}
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Text Content Column */}
+          <div className="flex flex-col items-start text-left space-y-6 md:space-y-8">
+            {heroPageData.tagline && (
+              <Badge variant="outline" className="py-1 px-3 border-primary/30 text-primary bg-primary/5">
+                <TaglineIcon className="mr-2 h-4 w-4" />
+                {heroPageData.tagline.text}
+              </Badge>
+            )}
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline text-foreground leading-tight">
+              {heroPageData.mainHeadline.line1}
+              <br />
+              {heroPageData.mainHeadline.line2}
             </h1>
-            <p className="text-base text-muted-foreground mb-8 max-w-prose">
+
+            <p className="text-base text-muted-foreground max-w-prose">
               {heroPageData.mainParagraph}
             </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-3 text-base font-semibold rounded-md"><Link href={heroPageData.mainCta.href}>{heroPageData.mainCta.text}</Link></Button>
+
+            {heroPageData.keyServiceLinks && heroPageData.keyServiceLinks.length > 0 && (
+              <div className="flex flex-wrap gap-3 pt-2">
+                {heroPageData.keyServiceLinks.map((link) => {
+                  const ServiceIcon = link.icon as Icon; // Type assertion
+                  return (
+                    <Button key={link.text} asChild variant="outline" size="sm" className="text-foreground/80 hover:bg-accent/50 hover:text-primary border-border">
+                      <Link href={link.href}>
+                        <ServiceIcon className="mr-2 h-4 w-4" />
+                        {link.text}
+                      </Link>
+                    </Button>
+                  );
+                })}
+              </div>
+            )}
+            
+            <Button asChild size="lg" className="bg-foreground hover:bg-foreground/80 text-background px-8 py-3 text-base font-semibold rounded-md mt-4">
+              <Link href={heroPageData.mainCta.href}>
+                {heroPageData.mainCta.text}
+                {CtaIcon && <CtaIcon className="ml-2 h-5 w-5" />}
+              </Link>
+            </Button>
           </div>
-          <div className="md:col-span-3 relative h-[350px] sm:h-[500px] md:h-[600px] lg:h-[600px] rounded-lg overflow-hidden shadow-lg"> {/* Added shadow, updated lg height */}
+
+          {/* Image Column */}
+          <div className="relative h-[450px] sm:h-[550px] md:h-[600px] lg:h-[700px] rounded-lg overflow-hidden shadow-xl order-first md:order-last">
             <Image
               src={heroPageData.mainImage.src}
               alt={heroPageData.mainImage.alt}
@@ -26,31 +66,11 @@ export function HeroSection() {
               objectFit="cover"
               data-ai-hint={heroPageData.mainImage.dataAiHint}
               priority
+              className="rounded-lg"
             />
-          </div>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-start">
-          <div className="md:col-span-2">
-            <h2 className="text-2xl sm:text-3xl font-headline font-semibold text-foreground leading-snug max-w-lg">
-              {heroPageData.secondaryHeadline}
-            </h2>
-            <Link href={heroPageData.secondaryLink.href} className="text-sm text-accent hover:text-accent/80 mt-4 inline-block underline underline-offset-4 transition-colors duration-300 ease-in-out">
-              {heroPageData.secondaryLink.text}
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 gap-4 md:mt-0 mt-8"> {/* Increased gap and mt */}
-            <div className="relative aspect-square rounded-lg overflow-hidden shadow-md"> {/* Added shadow */}
-              <Image src={heroPageData.smallImage1.src} alt={heroPageData.smallImage1.alt} layout="fill" objectFit="cover" data-ai-hint={heroPageData.smallImage1.dataAiHint} />
-            </div>
-            <div className="relative aspect-square rounded-lg overflow-hidden shadow-md"> {/* Added shadow */}
-              <Image src={heroPageData.smallImage2.src} alt={heroPageData.smallImage2.alt} layout="fill" objectFit="cover" data-ai-hint={heroPageData.smallImage2.dataAiHint} />
-            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
-    
-

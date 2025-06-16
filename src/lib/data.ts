@@ -1,6 +1,6 @@
 
 import type { Icon } from 'lucide-react';
-import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote, GalleryVertical, Leaf, Award, MessageSquare } from 'lucide-react';
+import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote, GalleryVertical, Leaf, Award, MessageSquare, Layers, Archive, ArrowRight } from 'lucide-react';
 
 export type NavLink = {
   href: string;
@@ -15,7 +15,7 @@ export const navLinks: NavLink[] = [
   { href: '/why-choose-us', label: 'Why Choose Us' },
 ];
 
-const placeholderGeneratedImageSrc = "https://placehold.co/1x1.png"; // Smallest possible valid data URI for a transparent pixel
+const placeholderGeneratedImageSrc = "https://placehold.co/1x1.png";
 
 export type ImageObject = {
   src: string;
@@ -336,7 +336,17 @@ export const testimonialsData: Testimonial[] = [
   },
 ];
 
+export type HeroKeyServiceLink = {
+  text: string;
+  icon: Icon;
+  href: string;
+};
+
 export type HeroPageData = {
+  tagline: {
+    text: string;
+    icon: Icon;
+  };
   mainHeadline: {
     line1: string;
     line2: string;
@@ -345,46 +355,37 @@ export type HeroPageData = {
   mainCta: {
     text: string;
     href: string;
+    icon?: Icon;
   };
+  keyServiceLinks: HeroKeyServiceLink[];
   mainImage: ImageObject;
-  secondaryHeadline: string;
-  secondaryLink: {
-    text: string;
-    href: string;
-  };
-  smallImage1: ImageObject;
-  smallImage2: ImageObject;
 };
 
 export const heroPageData: HeroPageData = {
+  tagline: {
+    text: 'Premium Interior Solutions',
+    icon: Sparkles,
+  },
   mainHeadline: {
-    line1: 'Modern Interior',
-    line2: 'Design Studio',
+    line1: 'Crafting',
+    line2: 'Modern Spaces',
   },
-  mainParagraph: 'Make the most of compact spaces with space saving furniture that are ingenuous and innovative. Transform your living spaces with interior designs.',
+  mainParagraph: 'Specialized in Modular Kitchens, Mica Works & Wardrobe Works. Transforming homes with contemporary design and premium craftsmanship in Puducherry.',
   mainCta: {
-    text: 'EXPLORE NOW',
-    href: '/about',
+    text: 'View Our Work',
+    href: '/portfolio',
+    icon: ArrowRight,
   },
+  keyServiceLinks: [
+    { text: 'Modular Kitchen', icon: LayoutGrid, href: '/portfolio' },
+    { text: 'Mica Works', icon: Layers, href: '/portfolio' },
+    { text: 'Wardrobe Works', icon: Archive, href: '/portfolio' },
+  ],
   mainImage: {
-    src: 'https://placehold.co/600x600.png',
-    alt: 'Modern interior workspace with chairs and desk',
-    dataAiHint: 'modern office interior',
-  },
-  secondaryHeadline: 'We will make these unique tastes of yours a design reality!',
-  secondaryLink: {
-    text: 'Learn About Py Interiors',
-    href: '/about',
-  },
-  smallImage1: {
-    src: 'https://placehold.co/300x300.png',
-    alt: 'Interior detail with lamp',
-    dataAiHint: 'desk lamp',
-  },
-  smallImage2: {
-    src: 'https://placehold.co/300x300.png',
-    alt: 'Interior detail with plants',
-    dataAiHint: 'potted plants shelf',
+    src: 'https://placehold.co/600x800.png',
+    alt: 'Modern teal kitchen cabinets with white countertops',
+    dataAiHint: 'modern kitchen teal cabinets',
   },
 };
     
+
