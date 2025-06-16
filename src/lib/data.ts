@@ -1,6 +1,6 @@
 
 import type { Icon } from 'lucide-react';
-import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote, GalleryVertical, Leaf, Award, MessageSquare, Layers, Archive, ArrowRight } from 'lucide-react';
+import { Home, Briefcase, LayoutGrid, Sofa, Wrench, Users, Info, Mail, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, Quote, GalleryVertical, Layers, Archive, ArrowRight } from 'lucide-react';
 
 export type NavLink = {
   href: string;
@@ -12,10 +12,9 @@ export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/why-choose-us', label: 'Why Choose Us' },
 ];
 
-const placeholderGeneratedImageSrc = "https://placehold.co/1x1.png";
+const placeholderGeneratedImageSrc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
 
 export type ImageObject = {
   src: string;
@@ -185,7 +184,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Jane Doe',
     role: 'Founder & Lead Designer',
     bio: 'With over 15 years of experience, Jane brings a passion for timeless design and a keen eye for detail to every project. She believes great design enhances quality of life.',
-    imageUrl: placeholderGeneratedImageSrc,
+    imageUrl: "https://placehold.co/300x300.png",
     dataAiHint: 'professional woman',
   },
   {
@@ -193,7 +192,7 @@ export const teamMembers: TeamMember[] = [
     name: 'John Smith',
     role: 'Senior Interior Designer',
     bio: 'John specializes in sustainable design and innovative material use. His work is characterized by clean lines and a harmonious balance of form and function.',
-    imageUrl: placeholderGeneratedImageSrc,
+    imageUrl: "https://placehold.co/300x300.png",
     dataAiHint: 'professional man',
   },
   {
@@ -201,7 +200,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Alice Brown',
     role: 'Project Manager',
     bio: 'Alice ensures every project runs smoothly from concept to completion. Her organizational skills and client-focused approach are invaluable to the team.',
-    imageUrl: placeholderGeneratedImageSrc,
+    imageUrl: "https://placehold.co/300x300.png",
     dataAiHint: 'smiling woman',
   },
 ];
@@ -264,41 +263,6 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     icon: Users,
   },
 ];
-
-export type WhyChooseUsPageItem = {
-  id: string;
-  title: string;
-  description: string;
-  icon: Icon;
-};
-
-export const whyChooseUsPageItems: WhyChooseUsPageItem[] = [
-  {
-    id: 'personalized-design',
-    title: 'Truly Personalized Design',
-    description: "We dive deep into your vision, lifestyle, and aspirations. Our design process is centered around you, creating spaces that are a true reflection of your personality and needs, not just a trend.",
-    icon: Users,
-  },
-  {
-    id: 'sustainable-sourcing',
-    title: 'Sustainable & Ethical Sourcing',
-    description: "We are committed to responsible design. We prioritize sourcing sustainable materials, eco-friendly products, and working with artisans who share our ethical values, creating beautiful spaces that are kind to the planet.",
-    icon: Leaf,
-  },
-  {
-    id: 'collaborative-journey',
-    title: 'A Collaborative Journey',
-    description: "Your voice matters every step of the way. We believe in transparent communication and a partnership approach, ensuring you're involved and informed from the initial concept to the final reveal.",
-    icon: MessageSquare, 
-  },
-  {
-    id: 'award-winning-excellence',
-    title: 'Award-Winning Excellence',
-    description: "Our portfolio speaks for itself, showcasing a diverse range of successful projects and satisfied clients. Our commitment to quality and innovative design has been recognized by industry awards.",
-    icon: Award,
-  },
-];
-
 
 export type Testimonial = {
   id: string;
@@ -367,8 +331,8 @@ export const heroPageData: HeroPageData = {
     icon: Sparkles,
   },
   mainHeadline: {
-    line1: 'Crafting',
-    line2: 'Modern Spaces',
+    line1: 'Modern Interior',
+    line2: 'Design Studio',
   },
   mainParagraph: 'Specialized in Modular Kitchens, Mica Works & Wardrobe Works. Transforming homes with contemporary design and premium craftsmanship in Puducherry.',
   mainCta: {
@@ -382,10 +346,9 @@ export const heroPageData: HeroPageData = {
     { text: 'Wardrobe Works', icon: Archive, href: '/portfolio' },
   ],
   mainImage: {
-    src: 'https://placehold.co/600x800.png',
+    src: 'https://placehold.co/600x600.png',
     alt: 'Modern teal kitchen cabinets with white countertops',
     dataAiHint: 'modern kitchen teal cabinets',
   },
 };
     
-

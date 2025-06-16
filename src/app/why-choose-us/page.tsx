@@ -1,5 +1,5 @@
 
-import { whyChooseUsPageItems } from '@/lib/data';
+import { whyChooseUsItems } from '@/lib/data';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -19,7 +19,7 @@ export default function WhyChooseUsPage() {
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16">
-        {whyChooseUsPageItems.map((item) => (
+        {whyChooseUsItems.map((item) => (
           <Card key={item.id} className="shadow-xl rounded-lg bg-card flex flex-col text-center hover:shadow-2xl transition-shadow duration-300 ease-in-out">
             <CardHeader className="pt-8 pb-4">
               <div className="mx-auto bg-primary/10 p-5 rounded-full w-fit mb-6 border-2 border-primary/20 shadow-md">
@@ -61,3 +61,4 @@ export default function WhyChooseUsPage() {
     </div>
   );
 }
+
