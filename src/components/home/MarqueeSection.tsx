@@ -8,14 +8,14 @@ export function MarqueeSection() {
     <>
       {marqueeTextItems.map((item, index) => (
         <React.Fragment key={index}>
-          <span className="mx-4 md:mx-6 text-xl md:text-3xl font-semibold font-headline tracking-wider text-foreground/80">
-            {item}
-          </span>
-          {index < marqueeTextItems.length - 1 && (
-            <span className="text-primary text-xl md:text-3xl font-semibold font-headline tracking-wider mx-1 md:mx-2">
+          {index > 0 && (
+            <span className="text-primary text-xl md:text-3xl font-semibold font-headline tracking-wider mx-4 md:mx-6">
               •
             </span>
           )}
+          <span className="text-xl md:text-3xl font-semibold font-headline tracking-wider text-foreground/80">
+            {item}
+          </span>
         </React.Fragment>
       ))}
     </>
