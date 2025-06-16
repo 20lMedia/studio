@@ -10,19 +10,26 @@
     --card-foreground: 20 15% 25%;
     --popover: 60 50% 98%;
     --popover-foreground: 20 15% 25%;
-    --primary: 40 30% 35%; /* Muted, rich dark olive/bronze */
-    --primary-foreground: 60 50% 98%; /* Contrast for accent: off-white */
+    
+    --primary: 2 66% 58%; /* Red-Orange from logo */
+    --primary-foreground: 0 0% 98%; /* Off-white for contrast */
+    
     --secondary: 60 25% 94%; /* Soft beige/gray */
     --secondary-foreground: 20 15% 25%;
+    
     --muted: 60 20% 90%; /* Lighter beige/gray */
     --muted-foreground: 20 15% 45%; /* Medium-dark warm gray */
-    --accent: 40 30% 35%; /* Same as primary */
-    --accent-foreground: 60 50% 98%; /* Same as primary-foreground */
+    
+    --accent: 203 18% 28%; /* Dark Teal/Slate from logo */
+    --accent-foreground: 0 0% 98%; /* Off-white for contrast */
+    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
+    
     --border: 60 20% 85%; /* Light warm gray */
     --input: 60 20% 92%; /* Slightly darker than border or light off-white */
-    --ring: 40 30% 35%; /* Accent color for rings */
+    --ring: 2 66% 58%; /* Red-Orange for rings */
+    
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -30,15 +37,15 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem; /* Minimal rounded corners - rounded-md */
 
-    /* Sidebar specific colors - can be adjusted if sidebar needs distinct theming */
-    --sidebar-background: 60 30% 96%; /* Slightly different off-white or soft gray for sidebar */
+    /* Sidebar specific colors */
+    --sidebar-background: 60 30% 96%; 
     --sidebar-foreground: 20 15% 25%;
-    --sidebar-primary: 40 30% 35%; /* Accent for sidebar elements */
-    --sidebar-primary-foreground: 60 50% 98%;
-    --sidebar-accent: 60 25% 92%; /* Hover/active states in sidebar */
-    --sidebar-accent-foreground: 20 15% 25%;
+    --sidebar-primary: 2 66% 58%; /* Red-Orange */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 203 18% 35%; /* Slightly lighter Dark Teal/Slate for sidebar hover */
+    --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 60 20% 88%;
-    --sidebar-ring: 40 30% 35%;
+    --sidebar-ring: 2 66% 58%;
   }
 
   .dark {
@@ -48,33 +55,41 @@
     --card-foreground: 60 50% 95%;
     --popover: 20 15% 15%;
     --popover-foreground: 60 50% 95%;
-    --primary: 40 30% 45%; /* Slightly lighter accent for dark mode */
-    --primary-foreground: 20 15% 10%; /* Dark contrast for accent button text */
+
+    --primary: 2 66% 58%; /* Red-Orange (can remain vibrant in dark mode) */
+    --primary-foreground: 0 0% 98%; /* Off-white for contrast */
+
     --secondary: 20 15% 20%;
     --secondary-foreground: 60 50% 95%;
+
     --muted: 20 15% 25%;
-    --muted-foreground: 60 50% 70%; /* Lighter muted text for dark mode */
-    --accent: 40 30% 45%;
-    --accent-foreground: 20 15% 10%;
+    --muted-foreground: 60 50% 70%; 
+
+    --accent: 203 18% 40%; /* Lighter Dark Teal/Slate for dark mode */
+    --accent-foreground: 0 0% 98%; /* Off-white for contrast */
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
+
     --border: 20 15% 30%;
     --input: 20 15% 22%;
-    --ring: 40 30% 45%;
+    --ring: 2 66% 58%; /* Red-Orange for rings */
+
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
 
+    /* Sidebar specific colors - dark mode */
     --sidebar-background: 20 15% 18%;
     --sidebar-foreground: 60 50% 95%;
-    --sidebar-primary: 40 30% 45%;
-    --sidebar-primary-foreground: 20 15% 10%;
-    --sidebar-accent: 20 15% 22%;
-    --sidebar-accent-foreground: 60 50% 95%;
+    --sidebar-primary: 2 66% 58%; 
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 203 18% 45%; /* Lighter Dark Teal/Slate for dark mode sidebar hover */
+    --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 20 15% 28%;
-    --sidebar-ring: 40 30% 45%;
+    --sidebar-ring: 2 66% 58%;
   }
 }
 
