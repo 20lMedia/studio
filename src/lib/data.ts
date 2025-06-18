@@ -62,7 +62,7 @@ export const projects: Project[] = [
     description: 'Elegant and inviting lobby design for a high-end boutique hotel.',
     longDescription: 'The goal for this boutique hotel lobby was to create a memorable first impression. We blended classic elegance with modern luxury, using plush velvet seating, marble accents, and statement lighting. A bespoke reception desk and curated art pieces complete the opulent yet welcoming atmosphere.',
     imageUrl: {
-      src: placeholderGeneratedImageSrc,
+      src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('hotel lobby')}`,
       alt: 'Elegant hotel lobby with plush seating and marble accents',
       dataAiHint: 'hotel lobby',
     },
@@ -310,7 +310,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "This is a placeholder testimonial. The service was exceptional and the results exceeded all expectations. Highly recommended for their professionalism and quality work.",
     author: 'Alex Placeholder',
     role: 'Satisfied Client',
-    imageUrl: placeholderGeneratedImageSrc,
+    imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=AP",
     dataAiHint: 'person smiling',
   },
   {
@@ -318,7 +318,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "Another filler review here. The team demonstrated great expertise and delivered the project on time. We are very pleased with the outcome and their collaborative approach.",
     author: 'Jamie Fillerton',
     role: 'Project Beneficiary',
-    imageUrl: placeholderGeneratedImageSrc,
+    imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=JF",
     dataAiHint: 'happy individual',
   },
   {
@@ -326,7 +326,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "Final example testimonial. Their creative solutions and attention to detail were impressive. A truly positive experience from start to finish with this outstanding team.",
     author: 'Casey Example',
     role: 'Pleased Customer',
-    imageUrl: placeholderGeneratedImageSrc,
+    imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=CE",
     dataAiHint: 'content face',
   },
 ];
@@ -390,4 +390,5 @@ export const heroPageData: HeroPageData = {
     
 
     
+
 
