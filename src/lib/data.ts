@@ -12,7 +12,7 @@ export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/testimonials', label: 'Testimonials' },
+  { href: '/#testimonials-section', label: 'Testimonials' },
 ];
 
 export type ImageObject = {
@@ -342,7 +342,7 @@ export type Testimonial = {
 
 export const testimonialsData: Testimonial[] = [
   {
-    id: 'testimonial-api-1',
+    id: 'api-review-1',
     quote: "I recently gave order to PY Interior in Pondicherry for an entertainment unit and wash basin unit, and the experience was outstanding. The team is professional, creative, and attentive to detail. Both units are stylish, functional, and perfectly complement my home. The project was completed on time and within budget. I highly recommend PY Interior for their excellent design services and craftsmanship.",
     author: 'karthik michel',
     role: 'Client Review',
@@ -351,8 +351,8 @@ export const testimonialsData: Testimonial[] = [
     rating: 5,
   },
   {
-    id: 'testimonial-api-2',
-    quote: "I had given them my new house kitchen interior works and they done a fabulous job and completed the project before the advised schedule at a more competitive cost. Mr. Arivan was great to work with! and explained clearly about the project and answered our queries patiently fom start to completion of the project! I would give them 5 stars and recommend to anyone for whole house interior works!",
+    id: 'api-review-2',
+    quote: "I had given them my new house kitchen interior works and they done a fabulous job and completed the project before the advised schedule at a more competitive cost. Mr. Arivan was great to work with! and explained clearly about the project and answered our queries patiently fom start to completion of the project!\n\nI would give them 5 stars and recommend to anyone for whole house interior works!",
     author: 'Bala Murugan',
     role: 'Client Review',
     imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=BM",
@@ -360,7 +360,7 @@ export const testimonialsData: Testimonial[] = [
     rating: 5,
   },
   {
-    id: 'testimonial-api-3',
+    id: 'api-review-3',
     quote: "Much recommended place to make your home look luxurious , the quality of work they provide is amazing , planning , giving more ideas and implementing as planned and handing over fully finished within the promised time !!",
     author: 'SHALINTH ADITHYAN',
     role: 'Client Review',
@@ -406,12 +406,12 @@ export const heroPageData: HeroPageData = {
   mainImages: [
     {
       src: '/py6.webp',
-      alt: 'Beautifully designed interior space by Py Interiors',
+      alt: 'Modern interior living space',
       dataAiHint: 'modern interior',
     },
     {
       src: '/py7.jpg',
-      alt: 'Another stunning interior project by Py Interiors',
+      alt: 'Elegant kitchen design',
       dataAiHint: 'luxury design',
     },
   ],
