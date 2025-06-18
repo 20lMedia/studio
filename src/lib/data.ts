@@ -143,7 +143,7 @@ export const services: Service[] = [
     id: 'space-planning',
     title: 'Space Planning & Optimization',
     description: 'Maximizing the potential of your space with intelligent layout solutions.',
-    icon: Users, 
+    icon: Users,
     startingPrice: '$2,000',
   },
   {
@@ -178,8 +178,8 @@ export const serviceOptionsForClient: Array<{ id: string; title: string; }> = se
 
 // This ensures Zod's `enum` gets a non-empty array typed as [string, ...string[]]
 const serviceIdsForZod = services.map(s => s.id);
-export const zodServiceEnumValues: [string, ...string[]] = serviceIdsForZod.length > 0 
-  ? [serviceIdsForZod[0], ...serviceIdsForZod.slice(1)] 
+export const zodServiceEnumValues: [string, ...string[]] = serviceIdsForZod.length > 0
+  ? [serviceIdsForZod[0], ...serviceIdsForZod.slice(1)]
   : (() => { throw new Error("services array cannot be empty for Zod enum generation"); })();
 
 
@@ -254,14 +254,14 @@ export const globalCtaContactInfo = {
   address: "Krishna Nagar, Puducherry, 605013",
   phoneNumbers: ["091593 22233"],
   email: "fillers@example.com",
-  businessHours: [ 
+  businessHours: [
     { day: "Monday - Saturday", time: "9:00 AM - 9:00 PM" },
   ],
   icons: {
     address: MapPin,
     phone: Phone,
     email: Mail,
-    hours: Clock, 
+    hours: Clock,
   }
 };
 
@@ -307,27 +307,27 @@ export type Testimonial = {
 export const testimonialsData: Testimonial[] = [
   {
     id: 'testimonial-1',
-    quote: "I had given them my new house kitchen interior works and they done a fabulous job and completed the project before the advised schedule at a more competitive cost. Mr. Arivan was great to work with! and explained clearly about the project and answered our queries patiently fom start to completion of the project! I would give them 5 stars and recommend to anyone for whole house interior works!",
-    author: 'Bala Murugan',
-    role: 'Client',
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    author: 'Satisfied Client',
+    role: 'Valued Customer',
     imageUrl: placeholderGeneratedImageSrc,
-    dataAiHint: 'client review',
+    dataAiHint: 'person',
   },
   {
     id: 'testimonial-2',
-    quote: "The team at Py Interiors was incredibly professional and brought our boutique's concept to life perfectly. Our customers love the new ambiance!",
-    author: 'Sarah L.',
-    role: 'Owner, The Chic Boutique',
+    quote: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.",
+    author: 'Another Happy Customer',
+    role: 'Client',
     imageUrl: placeholderGeneratedImageSrc,
-    dataAiHint: 'business woman',
+    dataAiHint: 'client',
   },
   {
     id: 'testimonial-3',
-    quote: "Working with Py Interiors was a seamless experience. They understood our needs for a functional yet inspiring office space and delivered beyond our expectations.",
-    author: 'Michael B.',
-    role: 'CEO, Tech Solutions Inc.',
+    quote: "Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum.",
+    author: 'Esteemed Patron',
+    role: 'Business Owner',
     imageUrl: placeholderGeneratedImageSrc,
-    dataAiHint: 'ceo portrait',
+    dataAiHint: 'business person',
   },
 ];
 
@@ -365,7 +365,7 @@ export const heroPageData: HeroPageData = {
     icon: ArrowRight,
   },
   mainImage: {
-    src: 'https://placehold.co/584x584.png', 
+    src: 'https://placehold.co/584x584.png',
     alt: 'Modern teal kitchen cabinets with white countertops',
     dataAiHint: 'modern kitchen teal cabinets',
   },
