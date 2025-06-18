@@ -40,7 +40,7 @@ export const projects: Project[] = [
     description: 'Transforming an industrial loft into a chic, contemporary living space.',
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
     imageUrl: {
-      src: 'https://images.unsplash.com/photo-1512972972907-6d71529c5e92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8aW50ZXJpb3J8ZW58MHx8fHwxNzUwMjM1NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      src: 'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8aW50ZXJpb3J8ZW58MHx8fHwxNzUwMjM1NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
       alt: 'Stylish modern loft interior design by Py Interiors',
       dataAiHint: 'modern loft',
     },
@@ -241,8 +241,8 @@ export const keyServicesSummary: Service[] = [
 
 export const companyInfo = {
   email: 'contact@pyinteriors.com',
-  phone: '+91 91593 22233', // Updated
-  address: 'Krishna Nagar, Puducherry, 605013, India', // Updated
+  phone: '+91 91593 22233',
+  address: 'Krishna Nagar, Puducherry, 605013, India',
   history: "Founded in 2010 by Jane Doe, Py Interiors began with a vision to create spaces that are not only beautiful but also deeply personal and functional. Over the past decade, we've grown into a renowned design studio, recognized for our commitment to quality, innovation, and client satisfaction. Our portfolio spans luxurious residences, dynamic commercial spaces, and everything in between.",
   mission: "Our mission is to transform ordinary spaces into extraordinary experiences. We strive to understand our clients' visions and bring them to life through thoughtful design, meticulous attention to detail, and a passion for creating environments that inspire and delight. We believe that good design has the power to enhance well-being and reflect individuality.",
   values: "Our core values are creativity, integrity, and client-centricity. We believe in pushing design boundaries while maintaining ethical practices and always putting our clients' needs first. Collaboration and open communication are key to our process.",
@@ -250,10 +250,10 @@ export const companyInfo = {
 };
 
 export const globalCtaContactInfo = {
-  address: "Krishna Nagar, Puducherry, 605013, India", // Updated
-  phoneNumbers: ["+91 91593 22233"], // Updated
-  email: "fillers@example.com", // API response has no specific email for CTA, keeping placeholder
-  businessHours: [ // Updated from API
+  address: "Krishna Nagar, Puducherry, 605013, India",
+  phoneNumbers: ["+91 91593 22233"],
+  email: "contact@pyinteriors.com", // Updated to match companyInfo
+  businessHours: [
     { day: "Monday - Saturday", time: "9:00 AM - 5:00 PM" },
     { day: "Sunday", time: "Closed" },
   ],
@@ -304,7 +304,6 @@ export type Testimonial = {
   dataAiHint?: string;
 };
 
-// Updated testimonials from API data
 export const testimonialsData: Testimonial[] = [
   {
     id: 'testimonial-api-1',
@@ -391,6 +390,7 @@ export const heroPageData: HeroPageData = {
 
 
     
+
 
 
 
