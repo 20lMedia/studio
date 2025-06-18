@@ -307,27 +307,27 @@ export type Testimonial = {
 export const testimonialsData: Testimonial[] = [
   {
     id: 'testimonial-1',
-    quote: "Working with Py Interiors was a dream. They transformed our outdated living room into a modern masterpiece that perfectly reflects our style. The attention to detail was phenomenal!",
-    author: 'Aarav Patel',
-    role: 'Homeowner, Puducherry',
+    quote: "This is a placeholder testimonial. The service was exceptional and the results exceeded all expectations. Highly recommended for their professionalism and quality work.",
+    author: 'Alex Placeholder',
+    role: 'Satisfied Client',
     imageUrl: placeholderGeneratedImageSrc,
-    dataAiHint: 'happy person',
+    dataAiHint: 'person smiling',
   },
   {
     id: 'testimonial-2',
-    quote: "The team at Py Interiors is incredibly talented and professional. They listened to our needs for our boutique and delivered a design that is both beautiful and highly functional. Our customers love it!",
-    author: 'Priya Singh',
-    role: 'Boutique Owner',
+    quote: "Another filler review here. The team demonstrated great expertise and delivered the project on time. We are very pleased with the outcome and their collaborative approach.",
+    author: 'Jamie Fillerton',
+    role: 'Project Beneficiary',
     imageUrl: placeholderGeneratedImageSrc,
-    dataAiHint: 'smiling professional',
+    dataAiHint: 'happy individual',
   },
   {
     id: 'testimonial-3',
-    quote: "From initial consultation to final installation, the process was seamless. Py Interiors handled every aspect of our kitchen remodel with expertise and creativity. We couldn't be happier!",
-    author: 'Rohan Kumar',
-    role: 'Apartment Resident',
+    quote: "Final example testimonial. Their creative solutions and attention to detail were impressive. A truly positive experience from start to finish with this outstanding team.",
+    author: 'Casey Example',
+    role: 'Pleased Customer',
     imageUrl: placeholderGeneratedImageSrc,
-    dataAiHint: 'content person',
+    dataAiHint: 'content face',
   },
 ];
 
@@ -366,22 +366,22 @@ export const heroPageData: HeroPageData = {
   },
   mainImages: [
     {
-      src: '/hero-carousel-1.jpg', // Updated path
+      src: '/py1.jpg',
       alt: 'Spacious modern living room with large windows',
       dataAiHint: 'modern living room',
     },
     {
-      src: '/hero-carousel-2.jpg', // Updated path
+      src: '/py2.jpg',
       alt: 'Sleek luxury kitchen with island and pendant lights',
       dataAiHint: 'luxury kitchen',
     },
     {
-      src: '/hero-carousel-3.jpg', // Updated path
+      src: '/py3.jpg',
       alt: 'Comfortable and cozy bedroom with soft lighting',
       dataAiHint: 'cozy bedroom',
     },
      {
-      src: '/hero-carousel-4.jpg', // Updated path
+      src: '/py4.jpg',
       alt: 'Elegant dining space with contemporary furniture',
       dataAiHint: 'elegant dining',
     },
@@ -390,3 +390,4 @@ export const heroPageData: HeroPageData = {
     
 
     
+
