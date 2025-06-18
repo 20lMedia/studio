@@ -41,7 +41,7 @@ export const projects: Project[] = [
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
     imageUrl: {
       src: '/py1.jpg',
-      alt: 'Main image for project',
+      alt: 'Interior project 1 showcase',
       dataAiHint: 'project image',
     },
     category: 'Residential',
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     longDescription: 'The goal for this boutique hotel lobby was to create a memorable first impression. We blended classic elegance with modern luxury, using plush velvet seating, marble accents, and statement lighting. A bespoke reception desk and curated art pieces complete the opulent yet welcoming atmosphere.',
     imageUrl: {
       src: '/py2.jpg',
-      alt: 'Main image for project',
+      alt: 'Interior project 2 showcase',
       dataAiHint: 'project image',
     },
     category: 'Commercial',
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     longDescription: 'This apartment design focuses on simplicity, functionality, and tranquility. We used a light color palette, natural materials like wood and linen, and clever storage solutions to maintain a clutter-free environment. The result is a peaceful haven that promotes relaxation and mindfulness.',
     imageUrl: {
       src: '/py3.jpg',
-      alt: 'Main image for project',
+      alt: 'Interior project 3 showcase',
       dataAiHint: 'project image',
     },
     category: 'Residential',
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     longDescription: 'This co-working space was designed to foster creativity and collaboration. It features a mix of private offices, open-plan work areas, and comfortable breakout zones. Bold colors, ergonomic furniture, and biophilic design elements contribute to a productive and energizing atmosphere.',
     imageUrl: {
       src: '/py4.jpg',
-      alt: 'Main image for project',
+      alt: 'Interior project 4 showcase',
       dataAiHint: 'project image',
     },
     category: 'Commercial',
@@ -240,8 +240,8 @@ export const keyServicesSummary: Service[] = [
 
 export const companyInfo = {
   email: 'contact@pyinteriors.com',
-  phone: '+1 (555) 123-4567',
-  address: 'Krishna Nagar, Puducherry, 605013',
+  phone: '+91 91593 22233', // Updated
+  address: 'Krishna Nagar, Puducherry, 605013, India', // Updated
   history: "Founded in 2010 by Jane Doe, Py Interiors began with a vision to create spaces that are not only beautiful but also deeply personal and functional. Over the past decade, we've grown into a renowned design studio, recognized for our commitment to quality, innovation, and client satisfaction. Our portfolio spans luxurious residences, dynamic commercial spaces, and everything in between.",
   mission: "Our mission is to transform ordinary spaces into extraordinary experiences. We strive to understand our clients' visions and bring them to life through thoughtful design, meticulous attention to detail, and a passion for creating environments that inspire and delight. We believe that good design has the power to enhance well-being and reflect individuality.",
   values: "Our core values are creativity, integrity, and client-centricity. We believe in pushing design boundaries while maintaining ethical practices and always putting our clients' needs first. Collaboration and open communication are key to our process.",
@@ -249,11 +249,12 @@ export const companyInfo = {
 };
 
 export const globalCtaContactInfo = {
-  address: "Krishna Nagar, Puducherry, 605013",
-  phoneNumbers: ["091593 22233"],
-  email: "fillers@example.com",
-  businessHours: [
-    { day: "Monday - Saturday", time: "9:00 AM - 9:00 PM" },
+  address: "Krishna Nagar, Puducherry, 605013, India", // Updated
+  phoneNumbers: ["+91 91593 22233"], // Updated
+  email: "fillers@example.com", // This was filler, might need updating from API if a primary email exists and differs
+  businessHours: [ // Updated based on API
+    { day: "Monday - Saturday", time: "9:00 AM - 5:00 PM" },
+    { day: "Sunday", time: "Closed" },
   ],
   icons: {
     address: MapPin,
@@ -304,28 +305,28 @@ export type Testimonial = {
 
 export const testimonialsData: Testimonial[] = [
   {
-    id: 'testimonial-1',
-    quote: "This is a placeholder testimonial. The service was exceptional and the results exceeded all expectations. Highly recommended for their professionalism and quality work.",
-    author: 'Alex Placeholder',
-    role: 'Satisfied Client',
-    imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=AP",
-    dataAiHint: 'person smiling',
+    id: 'testimonial-api-1',
+    quote: "I recently gave order to PY Interior in Pondicherry for an entertainment unit and wash basin unit, and the experience was outstanding. The team is professional, creative, and attentive to detail. Both units are stylish, functional, and perfectly complement my home. The project was completed on time and within budget. I highly recommend PY Interior for their excellent design services and craftsmanship.",
+    author: 'karthik michel',
+    role: 'Client Review',
+    imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=KM",
+    dataAiHint: 'person icon',
   },
   {
-    id: 'testimonial-2',
-    quote: "Another filler review here. The team demonstrated great expertise and delivered the project on time. We are very pleased with the outcome and their collaborative approach.",
-    author: 'Jamie Fillerton',
-    role: 'Project Beneficiary',
-    imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=JF",
-    dataAiHint: 'happy individual',
+    id: 'testimonial-api-2',
+    quote: "I had given them my new house kitchen interior works and they done a fabulous job and completed the project before the advised schedule at a more competitive cost. Mr. Arivan was great to work with! and explained clearly about the project and answered our queries patiently fom start to completion of the project! I would give them 5 stars and recommend to anyone for whole house interior works!",
+    author: 'Bala Murugan',
+    role: 'Client Review',
+    imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=BM",
+    dataAiHint: 'person icon',
   },
   {
-    id: 'testimonial-3',
-    quote: "Final example testimonial. Their creative solutions and attention to detail were impressive. A truly positive experience from start to finish with this outstanding team.",
-    author: 'Casey Example',
-    role: 'Pleased Customer',
-    imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=CE",
-    dataAiHint: 'content face',
+    id: 'testimonial-api-3',
+    quote: "Much recommended place to make your home look luxurious , the quality of work they provide is amazing , planning , giving more ideas and implementing as planned and handing over fully finished within the promised time !!",
+    author: 'SHALINTH ADITHYAN',
+    role: 'Client Review',
+    imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=SA",
+    dataAiHint: 'person icon',
   },
 ];
 
@@ -388,6 +389,7 @@ export const heroPageData: HeroPageData = {
     
 
     
+
 
 
 
