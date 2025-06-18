@@ -14,8 +14,6 @@ export const navLinks: NavLink[] = [
   { href: '/portfolio', label: 'Portfolio' },
 ];
 
-const placeholderGeneratedImageSrc = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
-
 export type ImageObject = {
   src: string;
   alt: string;
@@ -43,7 +41,7 @@ export const projects: Project[] = [
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
     imageUrl: {
       src: '/py1.jpg',
-      alt: 'Image for Modern Loft Conversion project',
+      alt: 'Main image for project',
       dataAiHint: 'project image',
     },
     category: 'Residential',
@@ -51,9 +49,9 @@ export const projects: Project[] = [
     client: 'Private Residence',
     location: 'Downtown Metropolis',
     images: [
-      { src: placeholderGeneratedImageSrc, alt: 'View of loft kitchen area', dataAiHint: 'loft kitchen' },
-      { src: placeholderGeneratedImageSrc, alt: 'Loft bedroom with minimalist design', dataAiHint: 'minimalist bedroom' },
-      { src: placeholderGeneratedImageSrc, alt: 'Detail of exposed brickwork in loft', dataAiHint: 'exposed brick' },
+      { src: 'https://placehold.co/600x400.png', alt: 'View of loft kitchen area', dataAiHint: 'loft kitchen' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Loft bedroom with minimalist design', dataAiHint: 'minimalist bedroom' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Detail of exposed brickwork in loft', dataAiHint: 'exposed brick' },
     ]
   },
   {
@@ -63,7 +61,7 @@ export const projects: Project[] = [
     longDescription: 'The goal for this boutique hotel lobby was to create a memorable first impression. We blended classic elegance with modern luxury, using plush velvet seating, marble accents, and statement lighting. A bespoke reception desk and curated art pieces complete the opulent yet welcoming atmosphere.',
     imageUrl: {
       src: '/py2.jpg',
-      alt: 'Image for Luxury Boutique Hotel Lobby project',
+      alt: 'Main image for project',
       dataAiHint: 'project image',
     },
     category: 'Commercial',
@@ -71,8 +69,8 @@ export const projects: Project[] = [
     client: 'The Velvet Orchid Hotel',
     location: 'City Center',
      images: [
-      { src: placeholderGeneratedImageSrc, alt: 'Hotel reception desk detail', dataAiHint: 'reception desk' },
-      { src: placeholderGeneratedImageSrc, alt: 'Statement lighting in hotel lobby', dataAiHint: 'statement lighting' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Hotel reception desk detail', dataAiHint: 'reception desk' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Statement lighting in hotel lobby', dataAiHint: 'statement lighting' },
     ]
   },
   {
@@ -82,7 +80,7 @@ export const projects: Project[] = [
     longDescription: 'This apartment design focuses on simplicity, functionality, and tranquility. We used a light color palette, natural materials like wood and linen, and clever storage solutions to maintain a clutter-free environment. The result is a peaceful haven that promotes relaxation and mindfulness.',
     imageUrl: {
       src: '/py3.jpg',
-      alt: 'Image for Serene Minimalist Apartment project',
+      alt: 'Main image for project',
       dataAiHint: 'project image',
     },
     category: 'Residential',
@@ -90,10 +88,10 @@ export const projects: Project[] = [
     client: 'Ms. Anya Sharma',
     location: 'Riverside District',
     images: [
-      { src: placeholderGeneratedImageSrc, alt: 'Minimalist kitchen with light wood cabinets', dataAiHint: 'minimalist kitchen' },
-      { src: placeholderGeneratedImageSrc, alt: 'Bedroom with natural light and simple decor', dataAiHint: 'simple bedroom' },
-      { src: placeholderGeneratedImageSrc, alt: 'Close-up of natural textures in apartment', dataAiHint: 'natural textures' },
-      { src: placeholderGeneratedImageSrc, alt: 'View of minimalist apartment balcony', dataAiHint: 'apartment balcony' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Minimalist kitchen with light wood cabinets', dataAiHint: 'minimalist kitchen' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Bedroom with natural light and simple decor', dataAiHint: 'simple bedroom' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Close-up of natural textures in apartment', dataAiHint: 'natural textures' },
+      { src: 'https://placehold.co/600x400.png', alt: 'View of minimalist apartment balcony', dataAiHint: 'apartment balcony' },
     ]
   },
   {
@@ -103,7 +101,7 @@ export const projects: Project[] = [
     longDescription: 'This co-working space was designed to foster creativity and collaboration. It features a mix of private offices, open-plan work areas, and comfortable breakout zones. Bold colors, ergonomic furniture, and biophilic design elements contribute to a productive and energizing atmosphere.',
     imageUrl: {
       src: '/py4.jpg',
-      alt: 'Image for Vibrant Co-working Space project',
+      alt: 'Main image for project',
       dataAiHint: 'project image',
     },
     category: 'Commercial',
@@ -111,7 +109,7 @@ export const projects: Project[] = [
     client: 'Innovate Hub',
     location: 'Tech Park',
     images: [
-      { src: placeholderGeneratedImageSrc, alt: 'Breakout area in co-working space', dataAiHint: 'office breakout' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Breakout area in co-working space', dataAiHint: 'office breakout' },
     ]
   },
 ];
@@ -390,6 +388,7 @@ export const heroPageData: HeroPageData = {
     
 
     
+
 
 
 
