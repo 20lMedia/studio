@@ -42,9 +42,9 @@ export const projects: Project[] = [
     description: 'Transforming an industrial loft into a chic, contemporary living space.',
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
     imageUrl: {
-      src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('modern loft')}`,
-      alt: 'Modern loft living space with high ceilings and contemporary furniture',
-      dataAiHint: 'modern loft',
+      src: '/py1.jpg',
+      alt: 'Image for Modern Loft Conversion project',
+      dataAiHint: 'project image',
     },
     category: 'Residential',
     year: 2023,
@@ -62,9 +62,9 @@ export const projects: Project[] = [
     description: 'Elegant and inviting lobby design for a high-end boutique hotel.',
     longDescription: 'The goal for this boutique hotel lobby was to create a memorable first impression. We blended classic elegance with modern luxury, using plush velvet seating, marble accents, and statement lighting. A bespoke reception desk and curated art pieces complete the opulent yet welcoming atmosphere.',
     imageUrl: {
-      src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('hotel lobby')}`,
-      alt: 'Elegant hotel lobby with plush seating and marble accents',
-      dataAiHint: 'hotel lobby',
+      src: '/py2.jpg',
+      alt: 'Image for Luxury Boutique Hotel Lobby project',
+      dataAiHint: 'project image',
     },
     category: 'Commercial',
     year: 2022,
@@ -81,9 +81,9 @@ export const projects: Project[] = [
     description: 'A calming and clutter-free apartment embracing minimalist principles.',
     longDescription: 'This apartment design focuses on simplicity, functionality, and tranquility. We used a light color palette, natural materials like wood and linen, and clever storage solutions to maintain a clutter-free environment. The result is a peaceful haven that promotes relaxation and mindfulness.',
     imageUrl: {
-      src: placeholderGeneratedImageSrc,
-      alt: 'Bright and airy minimalist apartment living room',
-      dataAiHint: 'minimalist apartment',
+      src: '/py3.jpg',
+      alt: 'Image for Serene Minimalist Apartment project',
+      dataAiHint: 'project image',
     },
     category: 'Residential',
     year: 2023,
@@ -102,9 +102,9 @@ export const projects: Project[] = [
     description: 'Dynamic and inspiring design for a modern co-working hub.',
     longDescription: 'This co-working space was designed to foster creativity and collaboration. It features a mix of private offices, open-plan work areas, and comfortable breakout zones. Bold colors, ergonomic furniture, and biophilic design elements contribute to a productive and energizing atmosphere.',
     imageUrl: {
-      src: placeholderGeneratedImageSrc,
-      alt: 'Modern co-working space with colorful accents and varied seating',
-      dataAiHint: 'coworking space',
+      src: '/py4.jpg',
+      alt: 'Image for Vibrant Co-working Space project',
+      dataAiHint: 'project image',
     },
     category: 'Commercial',
     year: 2022,
@@ -390,5 +390,6 @@ export const heroPageData: HeroPageData = {
     
 
     
+
 
 
