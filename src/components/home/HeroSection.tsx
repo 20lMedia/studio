@@ -15,7 +15,7 @@ export function HeroSection() {
   const CtaIcon = heroPageData.mainCta.icon;
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = heroPageData.mainImages;
+  const images = heroPageData.mainImages || [];
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
