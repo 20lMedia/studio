@@ -12,6 +12,7 @@ export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
+  { href: '/testimonials', label: 'Testimonials' },
 ];
 
 export type ImageObject = {
@@ -41,7 +42,7 @@ export const projects: Project[] = [
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
     imageUrl: {
       src: 'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8aW50ZXJpb3J8ZW58MHx8fHwxNzUwMjM1NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Stylish modern loft interior design by Py Interiors',
+      alt: 'Stylish modern loft interior designed by Py Interiors',
       dataAiHint: 'modern loft',
     },
     category: 'Residential',
@@ -81,7 +82,7 @@ export const projects: Project[] = [
     longDescription: 'This apartment design focuses on simplicity, functionality, and tranquility. We used a light color palette, natural materials like wood and linen, and clever storage solutions to maintain a clutter-free environment. The result is a peaceful haven that promotes relaxation and mindfulness.',
     imageUrl: {
       src: 'https://images.unsplash.com/photo-1501876725168-00c445821c9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxNaW5pbWFsaXN0JTIwQXBhcnRtZW50fGVufDB8fHx8MTc1MDIzNTQ2NHww&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Serene minimalist apartment by Py Interiors',
+      alt: 'Serene minimalist apartment designed by Py Interiors',
       dataAiHint: 'minimalist apartment',
     },
     category: 'Residential',
@@ -102,7 +103,7 @@ export const projects: Project[] = [
     longDescription: 'This co-working space was designed to foster creativity and collaboration. It features a mix of private offices, open-plan work areas, and comfortable breakout zones. Bold colors, ergonomic furniture, and biophilic design elements contribute to a productive and energizing atmosphere.',
     imageUrl: {
       src: 'https://images.unsplash.com/photo-1634712282287-14ed57b9cc89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8aW50ZXJpb3J8ZW58MHx8fHwxNzUwMjM1NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Vibrant co-working space design by Py Interiors',
+      alt: 'Vibrant co-working space designed by Py Interiors',
       dataAiHint: 'coworking space',
     },
     category: 'Commercial',
@@ -336,7 +337,7 @@ export type Testimonial = {
   role: string;
   imageUrl?: string;
   dataAiHint?: string;
-  rating: number; // Added rating
+  rating: number;
 };
 
 export const testimonialsData: Testimonial[] = [
@@ -415,3 +416,6 @@ export const heroPageData: HeroPageData = {
     },
   ],
 };
+
+
+    
