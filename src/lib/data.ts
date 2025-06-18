@@ -12,7 +12,7 @@ export const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/#testimonials-section', label: 'Testimonials' },
+  // { href: '/#testimonials-section', label: 'Testimonials' }, // Removed
 ];
 
 export type ImageObject = {
