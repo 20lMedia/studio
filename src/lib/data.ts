@@ -40,8 +40,8 @@ export const projects: Project[] = [
     description: 'Transforming an industrial loft into a chic, contemporary living space.',
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
     imageUrl: {
-      src: '/py1.jpg',
-      alt: 'Modern loft conversion by Py Interiors',
+      src: 'https://images.unsplash.com/photo-1512972972907-6d71529c5e92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8aW50ZXJpb3J8ZW58MHx8fHwxNzUwMjM1NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      alt: 'Stylish modern loft interior design',
       dataAiHint: 'modern loft',
     },
     category: 'Residential',
@@ -254,8 +254,8 @@ export const globalCtaContactInfo = {
   phoneNumbers: ["+91 91593 22233"],
   email: "fillers@example.com",
   businessHours: [
-    { day: "Monday - Saturday", time: "9:00 AM - 5:00 PM" },
-    { day: "Sunday", time: "Closed" },
+    { day: "Monday - Saturday", time: "9:00 AM - 5:00 PM" }, // Updated from API
+    { day: "Sunday", time: "Closed" }, // Updated from API
   ],
   icons: {
     address: MapPin,
@@ -311,7 +311,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "I recently gave order to PY Interior in Pondicherry for an entertainment unit and wash basin unit, and the experience was outstanding. The team is professional, creative, and attentive to detail. Both units are stylish, functional, and perfectly complement my home. The project was completed on time and within budget. I highly recommend PY Interior for their excellent design services and craftsmanship.",
     author: 'karthik michel',
     role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=KM",
+    imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=KM", // Placeholder with initials
     dataAiHint: 'person icon',
   },
   {
@@ -319,7 +319,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "I had given them my new house kitchen interior works and they done a fabulous job and completed the project before the advised schedule at a more competitive cost. Mr. Arivan was great to work with! and explained clearly about the project and answered our queries patiently fom start to completion of the project! I would give them 5 stars and recommend to anyone for whole house interior works!",
     author: 'Bala Murugan',
     role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=BM",
+    imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=BM", // Placeholder with initials
     dataAiHint: 'person icon',
   },
   {
@@ -327,7 +327,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "Much recommended place to make your home look luxurious , the quality of work they provide is amazing , planning , giving more ideas and implementing as planned and handing over fully finished within the promised time !!",
     author: 'SHALINTH ADITHYAN',
     role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=SA",
+    imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=SA", // Placeholder with initials
     dataAiHint: 'person icon',
   },
 ];
@@ -391,4 +391,5 @@ export const heroPageData: HeroPageData = {
 
 
     
+
 
