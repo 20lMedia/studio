@@ -40,7 +40,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 pt-10 border-t border-border text-center">
-          <p className="text-xs text-muted-foreground">&copy; {currentYear} Py Interiors. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground mx-auto">&copy; {currentYear} Py Interiors. All rights reserved.</p>
         </div>
       </div>
     </footer>
