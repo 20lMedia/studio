@@ -241,8 +241,8 @@ export const keyServicesSummary: Service[] = [
 
 export const companyInfo = {
   email: 'contact@pyinteriors.com',
-  phone: '+91 91593 22233', // Updated from API
-  address: 'Krishna Nagar, Puducherry, 605013, India', // Updated from API
+  phone: '+91 91593 22233',
+  address: 'Krishna Nagar, Puducherry, 605013, India',
   history: "Founded in 2010 by Jane Doe, Py Interiors began with a vision to create spaces that are not only beautiful but also deeply personal and functional. Over the past decade, we've grown into a renowned design studio, recognized for our commitment to quality, innovation, and client satisfaction. Our portfolio spans luxurious residences, dynamic commercial spaces, and everything in between.",
   mission: "Our mission is to transform ordinary spaces into extraordinary experiences. We strive to understand our clients' visions and bring them to life through thoughtful design, meticulous attention to detail, and a passion for creating environments that inspire and delight. We believe that good design has the power to enhance well-being and reflect individuality.",
   values: "Our core values are creativity, integrity, and client-centricity. We believe in pushing design boundaries while maintaining ethical practices and always putting our clients' needs first. Collaboration and open communication are key to our process.",
@@ -250,10 +250,10 @@ export const companyInfo = {
 };
 
 export const globalCtaContactInfo = {
-  address: "Krishna Nagar, Puducherry, 605013, India", // Updated from API
-  phoneNumbers: ["+91 91593 22233"], // Updated from API
-  email: "fillers@example.com", // Keeping example email as API one might not be desired for public CTA
-  businessHours: [ // Updated from API
+  address: "Krishna Nagar, Puducherry, 605013, India",
+  phoneNumbers: ["+91 91593 22233"],
+  email: "fillers@example.com",
+  businessHours: [
     { day: "Monday - Saturday", time: "9:00 AM - 5:00 PM" },
     { day: "Sunday", time: "Closed" },
   ],
@@ -311,7 +311,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "I recently gave order to PY Interior in Pondicherry for an entertainment unit and wash basin unit, and the experience was outstanding. The team is professional, creative, and attentive to detail. Both units are stylish, functional, and perfectly complement my home. The project was completed on time and within budget. I highly recommend PY Interior for their excellent design services and craftsmanship.",
     author: 'karthik michel',
     role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=KM", // Initials placeholder
+    imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=KM",
     dataAiHint: 'person icon',
   },
   {
@@ -319,7 +319,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "I had given them my new house kitchen interior works and they done a fabulous job and completed the project before the advised schedule at a more competitive cost. Mr. Arivan was great to work with! and explained clearly about the project and answered our queries patiently fom start to completion of the project! I would give them 5 stars and recommend to anyone for whole house interior works!",
     author: 'Bala Murugan',
     role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=BM", // Initials placeholder
+    imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=BM",
     dataAiHint: 'person icon',
   },
   {
@@ -327,7 +327,7 @@ export const testimonialsData: Testimonial[] = [
     quote: "Much recommended place to make your home look luxurious , the quality of work they provide is amazing , planning , giving more ideas and implementing as planned and handing over fully finished within the promised time !!",
     author: 'SHALINTH ADITHYAN',
     role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=SA", // Initials placeholder
+    imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=SA",
     dataAiHint: 'person icon',
   },
 ];
@@ -388,3 +388,6 @@ export const heroPageData: HeroPageData = {
 
 
 
+
+
+    
