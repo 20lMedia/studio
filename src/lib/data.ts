@@ -61,7 +61,7 @@ export const projects: Project[] = [
     description: 'Elegant and inviting lobby design for a high-end boutique hotel.',
     longDescription: 'The goal for this boutique hotel lobby was to create a memorable first impression. We blended classic elegance with modern luxury, using plush velvet seating, marble accents, and statement lighting. A bespoke reception desk and curated art pieces complete the opulent yet welcoming atmosphere.',
     imageUrl: {
-      src: '/py2.jpg',
+      src: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNHx8aW50ZXJpb3IlMjB8ZW58MHx8fHwxNzUwMjM1NDk2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       alt: 'Luxury boutique hotel lobby designed by Py Interiors',
       dataAiHint: 'hotel lobby',
     },
@@ -391,3 +391,4 @@ export const heroPageData: HeroPageData = {
 
 
     
+
