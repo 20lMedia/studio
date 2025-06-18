@@ -80,7 +80,7 @@ export const projects: Project[] = [
     description: 'A calming and clutter-free apartment embracing minimalist principles.',
     longDescription: 'This apartment design focuses on simplicity, functionality, and tranquility. We used a light color palette, natural materials like wood and linen, and clever storage solutions to maintain a clutter-free environment. The result is a peaceful haven that promotes relaxation and mindfulness.',
     imageUrl: {
-      src: '/py3.jpg',
+      src: 'https://images.unsplash.com/photo-1501876725168-00c445821c9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxNaW5pbWFsaXN0JTIwQXBhcnRtZW50fGVufDB8fHx8MTc1MDIzNTQ2NHww&ixlib=rb-4.1.0&q=80&w=1080',
       alt: 'Serene minimalist apartment by Py Interiors',
       dataAiHint: 'minimalist apartment',
     },
