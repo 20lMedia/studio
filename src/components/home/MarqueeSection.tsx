@@ -22,7 +22,7 @@ export function MarqueeSection() {
   );
 
   return (
-    <section className="w-full relative flex overflow-x-hidden pt-2 pb-4 md:pt-3 md:pb-6 bg-secondary group">
+    <section className="w-screen relative left-1/2 -translate-x-1/2 flex overflow-x-hidden pt-2 pb-4 md:pt-3 md:pb-6 bg-secondary group">
       {/* This div starts in view and moves to the right, then repeats */}
       <div className="animate-marquee-right whitespace-nowrap group-hover:[animation-play-state:paused] flex-shrink-0">
         {renderMarqueeContent()}
