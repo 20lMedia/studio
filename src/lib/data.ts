@@ -346,7 +346,7 @@ export type HeroPageData = {
     href: string;
     icon?: Icon;
   };
-  mainImage: ImageObject;
+  mainImages: ImageObject[]; // Changed from mainImage (single) to mainImages (array)
 };
 
 export const heroPageData: HeroPageData = {
@@ -364,10 +364,29 @@ export const heroPageData: HeroPageData = {
     href: '/portfolio',
     icon: ArrowRight,
   },
-  mainImage: {
-    src: 'https://placehold.co/584x584.png',
-    alt: 'Modern teal kitchen cabinets with white countertops',
-    dataAiHint: 'modern kitchen teal cabinets',
-  },
+  mainImages: [ // Changed from mainImage (single object) to mainImages (array of objects)
+    {
+      src: `https://source.unsplash.com/featured/1200x800/?${encodeURIComponent('modern living room')}`,
+      alt: 'Spacious modern living room with large windows',
+      dataAiHint: 'modern living room',
+    },
+    {
+      src: `https://source.unsplash.com/featured/1200x800/?${encodeURIComponent('luxury kitchen design')}`,
+      alt: 'Sleek luxury kitchen with island and pendant lights',
+      dataAiHint: 'luxury kitchen',
+    },
+    {
+      src: `https://source.unsplash.com/featured/1200x800/?${encodeURIComponent('cozy bedroom interior')}`,
+      alt: 'Comfortable and cozy bedroom with soft lighting',
+      dataAiHint: 'cozy bedroom',
+    },
+     {
+      src: `https://source.unsplash.com/featured/1200x800/?${encodeURIComponent('elegant dining space')}`,
+      alt: 'Elegant dining space with contemporary furniture',
+      dataAiHint: 'elegant dining',
+    },
+  ],
 };
+    
+
     

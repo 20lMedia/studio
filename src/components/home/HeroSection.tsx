@@ -1,14 +1,29 @@
 
+"use client"; // Added for useState
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { heroPageData } from '@/lib/data';
 import { Badge } from '@/components/ui/badge'; 
 import type { Icon } from 'lucide-react';
+import { useState } from 'react'; // Added for carousel state
+import { ChevronLeft, ChevronRight } from 'lucide-react'; // Added for carousel controls
 
 export function HeroSection() {
   const TaglineIcon = heroPageData.tagline.icon;
   const CtaIcon = heroPageData.mainCta.icon;
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = heroPageData.mainImages;
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
 
   return (
     <section className="pb-8 md:pb-10">
@@ -41,20 +56,67 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Image Column */}
-          <div className="relative h-[400px] sm:h-[500px] md:h-[584px] lg:h-[584px] rounded-lg overflow-hidden shadow-xl order-last md:order-last">
-            <Image
-              src={heroPageData.mainImage.src}
-              alt={heroPageData.mainImage.alt}
-              layout="fill"
-              objectFit="cover"
-              data-ai-hint={heroPageData.mainImage.dataAiHint}
-              priority
-              className="rounded-lg"
-            />
+          {/* Image Carousel Column */}
+          <div className="relative h-[400px] sm:h-[500px] md:h-[584px] lg:h-[584px] rounded-lg overflow-hidden shadow-xl order-last md:order-last group">
+            {images.map((image, index) => (
+              <div
+                key={image.src + index} // Add index to key for safety if src isn't unique
+                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                  index === currentImageIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  layout="fill"
+                  objectFit="cover"
+                  data-ai-hint={image.dataAiHint}
+                  priority={index === 0} // Only first image is high priority
+                  className="rounded-lg"
+                />
+              </div>
+            ))}
+            
+            {images.length > 1 && (
+              <>
+                <Button
+                  onClick={prevImage}
+                  variant="ghost"
+                  size="icon"
+                  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 focus:opacity-100"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </Button>
+                <Button
+                  onClick={nextImage}
+                  variant="ghost"
+                  size="icon"
+                  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 focus:opacity-100"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </Button>
+                
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex space-x-2">
+                  {images.map((_, index) => (
+                    <button
+                      key={`dot-${index}`}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ease-in-out ${
+                        index === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
+                      }`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+    
