@@ -1,8 +1,7 @@
 
 import Image from 'next/image';
-import { teamMembers, companyInfoDetails, testimonialsData, companyInfo } from '@/lib/data';
+import { teamMembers, companyInfoDetails } from '@/lib/data';
 import { TeamMemberCard } from '@/components/about/TeamMemberCard';
-import { TestimonialAboutCard } from '@/components/about/TestimonialAboutCard';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { Icon } from 'lucide-react';
 
@@ -87,18 +86,6 @@ export default function AboutPage() {
         <div className="space-y-10 md:space-y-12">
           {teamMembers.map((member) => (
             <TeamMemberCard key={member.id} member={member} />
-          ))}
-        </div>
-      </section>
-
-      <hr className="border-border/50" />
-
-      {/* Section 4: Reviews - Reviews from our happy clients */}
-      <section>
-        <SectionHeading number="04/ Testimonials" title="Reviews From Our Happy Clients" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {testimonialsData.slice(0,3).map((testimonial) => (
-            <TestimonialAboutCard key={testimonial.id} testimonial={testimonial} />
           ))}
         </div>
       </section>
