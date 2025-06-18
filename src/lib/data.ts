@@ -42,7 +42,7 @@ export const projects: Project[] = [
     description: 'Transforming an industrial loft into a chic, contemporary living space.',
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
     imageUrl: {
-      src: placeholderGeneratedImageSrc,
+      src: `https://source.unsplash.com/featured/800x600/?${encodeURIComponent('modern loft')}`,
       alt: 'Modern loft living space with high ceilings and contemporary furniture',
       dataAiHint: 'modern loft',
     },
