@@ -1,6 +1,6 @@
 
 import type { Icon } from 'lucide-react';
-import { Home, Briefcase, Sofa, Wrench, Users, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, ArrowRight, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Home, Briefcase, Sofa, Wrench, Users, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, ArrowRight, MapPin, Phone, Mail, Clock, BookOpen, Target, Gem, Workflow } from 'lucide-react';
 
 export type NavLink = {
   href: string;
@@ -175,7 +175,6 @@ export const serviceOptionsForClient: Array<{ id: string; title: string; }> = se
   })
 );
 
-// This ensures Zod's `enum` gets a non-empty array typed as [string, ...string[]]
 const serviceIdsForZod = services.map(s => s.id);
 export const zodServiceEnumValues: [string, ...string[]] = serviceIdsForZod.length > 0
   ? [serviceIdsForZod[0], ...serviceIdsForZod.slice(1)]
@@ -218,6 +217,41 @@ export const teamMembers: TeamMember[] = [
   },
 ];
 
+export type CompanyInfoDetail = {
+  id: string;
+  title: string;
+  description: string;
+  icon: Icon;
+};
+
+export const companyInfoDetails: CompanyInfoDetail[] = [
+  {
+    id: 'history',
+    title: 'Our Story',
+    description: "Founded in 2010 by Jane Doe, Py Interiors began with a vision to create spaces that are not only beautiful but also deeply personal and functional. Over the past decade, we've grown into a renowned design studio, recognized for our commitment to quality, innovation, and client satisfaction. Our portfolio spans luxurious residences, dynamic commercial spaces, and everything in between.",
+    icon: BookOpen,
+  },
+  {
+    id: 'mission',
+    title: 'Our Mission',
+    description: "Our mission is to transform ordinary spaces into extraordinary experiences. We strive to understand our clients' visions and bring them to life through thoughtful design, meticulous attention to detail, and a passion for creating environments that inspire and delight. We believe that good design has the power to enhance well-being and reflect individuality.",
+    icon: Target,
+  },
+  {
+    id: 'values',
+    title: 'Our Values',
+    description: "Our core values are creativity, integrity, and client-centricity. We believe in pushing design boundaries while maintaining ethical practices and always putting our clients' needs first. Collaboration and open communication are key to our process.",
+    icon: Gem,
+  },
+  {
+    id: 'approach',
+    title: 'Our Approach',
+    description: "Our design approach is holistic and collaborative. We start by deeply understanding your aspirations and lifestyle. Then, we meticulously plan every detail, from space optimization to material selection, ensuring a cohesive and harmonious result. We manage projects with precision, ensuring they are delivered on time and within budget.",
+    icon: Workflow,
+  }
+];
+
+
 export const keyServicesSummary: Service[] = [
   {
     id: 'residential-key',
@@ -252,7 +286,7 @@ export const companyInfo = {
 export const globalCtaContactInfo = {
   address: "Krishna Nagar, Puducherry, 605013, India",
   phoneNumbers: ["+91 91593 22233"],
-  email: "contact@pyinteriors.com", // Updated to match companyInfo
+  email: "contact@pyinteriors.com",
   businessHours: [
     { day: "Monday - Saturday", time: "9:00 AM - 5:00 PM" },
     { day: "Sunday", time: "Closed" },
@@ -302,6 +336,7 @@ export type Testimonial = {
   role: string;
   imageUrl?: string;
   dataAiHint?: string;
+  rating: number; // Added rating
 };
 
 export const testimonialsData: Testimonial[] = [
@@ -312,6 +347,7 @@ export const testimonialsData: Testimonial[] = [
     role: 'Client Review',
     imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=KM",
     dataAiHint: 'person icon',
+    rating: 5,
   },
   {
     id: 'testimonial-api-2',
@@ -320,6 +356,7 @@ export const testimonialsData: Testimonial[] = [
     role: 'Client Review',
     imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=BM",
     dataAiHint: 'person icon',
+    rating: 5,
   },
   {
     id: 'testimonial-api-3',
@@ -328,6 +365,7 @@ export const testimonialsData: Testimonial[] = [
     role: 'Client Review',
     imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=SA",
     dataAiHint: 'person icon',
+    rating: 5,
   },
 ];
 
@@ -377,20 +415,3 @@ export const heroPageData: HeroPageData = {
     },
   ],
 };
-    
-
-    
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
