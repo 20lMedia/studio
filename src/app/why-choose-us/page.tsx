@@ -37,7 +37,7 @@ export default function WhyChooseUsPage() {
       <section className="relative py-16 md:py-24 mt-12 md:mt-16 rounded-lg overflow-hidden bg-secondary/30">
          <div className="absolute inset-0 z-0 opacity-30">
             <Image
-                src="https://placehold.co/1200x400.png" 
+                src={`https://source.unsplash.com/featured/1200x400/?${encodeURIComponent('abstract design')}`}
                 alt="Abstract design background"
                 layout="fill"
                 objectFit="cover"
