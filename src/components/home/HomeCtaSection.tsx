@@ -7,10 +7,10 @@ export function HomeCtaSection() {
     <section className="py-16 md:py-24 bg-primary text-primary-foreground rounded-lg my-12 md:my-16 shadow-xl"> {/* Updated colors, added shadow and md:my-16 */}
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold font-headline mb-6">
-          Ready to Transform Your Space?
+          Ready to Build Your Dream?
         </h2>
         <p className="text-lg mb-10 max-w-2xl mx-auto text-primary-foreground/90"> {/* Increased bottom margin, adjusted opacity */}
-          Let&apos;s discuss your vision and how Py Interiors can bring it to life. Explore our about page to learn more about our approach.
+          Let&apos;s discuss your vision and how Aadhi Constructions can bring it to life. Learn more about our process and commitment to quality.
         </p>
         <Button
           asChild
@@ -22,4 +22,3 @@ export function HomeCtaSection() {
     </section>
   );
 }
-

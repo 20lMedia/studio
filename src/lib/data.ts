@@ -1,6 +1,6 @@
 
 import type { Icon } from 'lucide-react';
-import { Home, Briefcase, Sofa, Wrench, Users, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, ArrowRight, MapPin, Phone, Mail, Clock, BookOpen, Target, Gem, Workflow } from 'lucide-react';
+import { Home, Briefcase, Sofa, Wrench, Users, Palette, Landmark, Sparkles, ShieldCheck, Lightbulb, ArrowRight, MapPin, Phone, Mail, Clock, BookOpen, Target, Gem, Workflow, Building } from 'lucide-react';
 
 export type NavLink = {
   href: string;
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
     imageUrl: {
       src: 'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8aW50ZXJpb3J8ZW58MHx8fHwxNzUwMjM1NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Stylish modern loft interior design by Py Interiors',
+      alt: 'Stylish modern loft interior design by Aadhi Constructions and Interiors',
       dataAiHint: 'modern loft',
     },
     category: 'Residential',
@@ -49,10 +49,10 @@ export const projects: Project[] = [
     client: 'Private Residence',
     location: 'Downtown Metropolis',
     images: [
-      { src: '/py2.jpg', alt: 'View of loft kitchen area', dataAiHint: 'loft kitchen' },
-      { src: '/py3.jpg', alt: 'Loft bedroom with minimalist design', dataAiHint: 'minimalist bedroom' },
-      { src: '/py4.jpg', alt: 'Detail of exposed brickwork in loft', dataAiHint: 'exposed brick' },
-      { src: '/py5.jpg', alt: 'View of loft living space', dataAiHint: 'loft living' },
+      { src: 'https://placehold.co/600x400.png', alt: 'View of loft kitchen area', dataAiHint: 'loft kitchen' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Loft bedroom with minimalist design', dataAiHint: 'minimalist bedroom' },
+      { src: 'https://placehold.co/600x400.png', alt: 'Detail of exposed brickwork in loft', dataAiHint: 'exposed brick' },
+      { src: 'https://placehold.co/600x400.png', alt: 'View of loft living space', dataAiHint: 'loft living' },
     ]
   },
   {
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     longDescription: 'The goal for this boutique hotel lobby was to create a memorable first impression. We blended classic elegance with modern luxury, using plush velvet seating, marble accents, and statement lighting. A bespoke reception desk and curated art pieces complete the opulent yet welcoming atmosphere.',
     imageUrl: {
       src: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNHx8aW50ZXJpb3IlMjB8ZW58MHx8fHwxNzUwMjM1NDk2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Luxury boutique hotel lobby designed by Py Interiors',
+      alt: 'Luxury boutique hotel lobby designed by Aadhi Constructions and Interiors',
       dataAiHint: 'hotel lobby',
     },
     category: 'Commercial',
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     longDescription: 'This apartment design focuses on simplicity, functionality, and tranquility. We used a light color palette, natural materials like wood and linen, and clever storage solutions to maintain a clutter-free environment. The result is a peaceful haven that promotes relaxation and mindfulness.',
     imageUrl: {
       src: 'https://images.unsplash.com/photo-1501876725168-00c445821c9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxNaW5pbWFsaXN0JTIwQXBhcnRtZW50fGVufDB8fHx8MTc1MDIzNTQ2NHww&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Serene minimalist apartment by Py Interiors',
+      alt: 'Serene minimalist apartment by Aadhi Constructions and Interiors',
       dataAiHint: 'minimalist apartment',
     },
     category: 'Residential',
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     longDescription: 'This co-working space was designed to foster creativity and collaboration. It features a mix of private offices, open-plan work areas, and comfortable breakout zones. Bold colors, ergonomic furniture, and biophilic design elements contribute to a productive and energizing atmosphere.',
     imageUrl: {
       src: 'https://images.unsplash.com/photo-1634712282287-14ed57b9cc89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8aW50ZXJpb3J8ZW58MHx8fHwxNzUwMjM1NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Vibrant co-working space design by Py Interiors',
+      alt: 'Vibrant co-working space design by Aadhi Constructions and Interiors',
       dataAiHint: 'coworking space',
     },
     category: 'Commercial',
@@ -125,17 +125,17 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    id: 'residential-design',
-    title: 'Residential Design',
-    description: 'Creating personalized and functional living spaces that reflect your style.',
-    icon: Home,
-    startingPrice: '$5,000',
+    id: 'full-construction',
+    title: 'Full Construction',
+    description: 'Complete construction services from foundation to finishing, ensuring quality and durability.',
+    icon: Building,
+    startingPrice: 'Contact for quote',
   },
   {
-    id: 'commercial-design',
-    title: 'Commercial Design',
-    description: 'Designing inspiring and productive environments for businesses of all sizes.',
-    icon: Briefcase,
+    id: 'interior-design',
+    title: 'Interior Design',
+    description: 'Designing inspiring and productive environments for homes and businesses.',
+    icon: Home,
     startingPrice: '$10,000',
   },
   {
@@ -192,28 +192,28 @@ export type TeamMember = {
 
 export const teamMembers: TeamMember[] = [
   {
-    id: 'jane-doe',
-    name: 'Jane Doe',
-    role: 'Founder & Lead Designer',
-    bio: 'With over 15 years of experience, Jane brings a passion for timeless design and a keen eye for detail to every project. She believes great design enhances quality of life.',
-    imageUrl: "https://placehold.co/300x300.png",
-    dataAiHint: 'professional woman',
-  },
-  {
-    id: 'john-smith',
-    name: 'John Smith',
-    role: 'Senior Interior Designer',
-    bio: 'John specializes in sustainable design and innovative material use. His work is characterized by clean lines and a harmonious balance of form and function.',
+    id: 'lead-engineer',
+    name: 'Lead Engineer',
+    role: 'Founder & Lead Engineer',
+    bio: 'With over 15 years of experience, our founder brings a passion for robust construction and a keen eye for detail to every project. They believe great design enhances quality of life.',
     imageUrl: "https://placehold.co/300x300.png",
     dataAiHint: 'professional man',
   },
   {
-    id: 'alice-brown',
-    name: 'Alice Brown',
-    role: 'Project Manager',
-    bio: 'Alice ensures every project runs smoothly from concept to completion. Her organizational skills and client-focused approach are invaluable to the team.',
+    id: 'senior-designer',
+    name: 'Senior Designer',
+    role: 'Senior Interior Designer',
+    bio: 'Our designer specializes in sustainable design and innovative material use. Their work is characterized by clean lines and a harmonious balance of form and function.',
     imageUrl: "https://placehold.co/300x300.png",
-    dataAiHint: 'smiling woman',
+    dataAiHint: 'professional woman',
+  },
+  {
+    id: 'project-manager',
+    name: 'Project Manager',
+    role: 'Project Manager',
+    bio: 'Our PM ensures every project runs smoothly from concept to completion. Their organizational skills and client-focused approach are invaluable to the team.',
+    imageUrl: "https://placehold.co/300x300.png",
+    dataAiHint: 'smiling person',
   },
 ];
 
@@ -228,25 +228,25 @@ export const companyInfoDetails: CompanyInfoDetail[] = [
   {
     id: 'history',
     title: 'Our Story',
-    description: "Founded in 2010 by Jane Doe, Py Interiors began with a vision to create spaces that are not only beautiful but also deeply personal and functional. Over the past decade, we've grown into a renowned design studio, recognized for our commitment to quality, innovation, and client satisfaction. Our portfolio spans luxurious residences, dynamic commercial spaces, and everything in between.",
+    description: "Aadhi Constructions and Interiors was founded with a vision to create spaces that are not only beautiful but also built to last. We've grown into a renowned design and construction studio, recognized for our commitment to quality, innovation, and client satisfaction. Our portfolio spans residential homes, dynamic commercial spaces, and everything in between.",
     icon: BookOpen,
   },
   {
     id: 'mission',
     title: 'Our Mission',
-    description: "Our mission is to transform ordinary spaces into extraordinary experiences. We strive to understand our clients' visions and bring them to life through thoughtful design, meticulous attention to detail, and a passion for creating environments that inspire and delight. We believe that good design has the power to enhance well-being and reflect individuality.",
+    description: "Our mission is to transform ordinary spaces into extraordinary experiences through robust construction and thoughtful design. We strive to understand our clients' visions and bring them to life with meticulous attention to detail.",
     icon: Target,
   },
   {
     id: 'values',
     title: 'Our Values',
-    description: "Our core values are creativity, integrity, and client-centricity. We believe in pushing design boundaries while maintaining ethical practices and always putting our clients' needs first. Collaboration and open communication are key to our process.",
+    description: "Our core values are quality, integrity, and client-centricity. We believe in pushing design boundaries while maintaining the highest standards of construction and ethical practices.",
     icon: Gem,
   },
   {
     id: 'approach',
     title: 'Our Approach',
-    description: "Our design approach is holistic and collaborative. We start by deeply understanding your aspirations and lifestyle. Then, we meticulously plan every detail, from space optimization to material selection, ensuring a cohesive and harmonious result. We manage projects with precision, ensuring they are delivered on time and within budget.",
+    description: "Our approach is holistic and collaborative. We manage projects with precision, from initial blueprints to the final coat of paint, ensuring they are delivered on time and within budget.",
     icon: Workflow,
   }
 ];
@@ -255,41 +255,42 @@ export const companyInfoDetails: CompanyInfoDetail[] = [
 export const keyServicesSummary: Service[] = [
   {
     id: 'residential-key',
-    title: 'Residential Spaces',
+    title: 'Residential Homes',
     description: 'Homes tailored to your lifestyle.',
     icon: Home,
   },
   {
-    id: 'commercial-key',
-    title: 'Commercial Venues',
-    description: 'Designs that elevate your brand.',
-    icon: Landmark,
+    id: 'construction-key',
+    title: 'Quality Construction',
+    description: 'Buildings that are made to last.',
+    icon: Building,
   },
   {
     id: 'bespoke-key',
-    title: 'Bespoke Solutions',
+    title: 'Bespoke Interiors',
     description: 'Unique touches for unique spaces.',
     icon: Sparkles,
   },
 ];
 
 export const companyInfo = {
-  email: 'contact@pyinteriors.com',
-  phone: '+91 91593 22233',
-  address: 'Krishna Nagar, Puducherry, 605013, India',
-  history: "Founded in 2010 by Jane Doe, Py Interiors began with a vision to create spaces that are not only beautiful but also deeply personal and functional. Over the past decade, we've grown into a renowned design studio, recognized for our commitment to quality, innovation, and client satisfaction. Our portfolio spans luxurious residences, dynamic commercial spaces, and everything in between.",
-  mission: "Our mission is to transform ordinary spaces into extraordinary experiences. We strive to understand our clients' visions and bring them to life through thoughtful design, meticulous attention to detail, and a passion for creating environments that inspire and delight. We believe that good design has the power to enhance well-being and reflect individuality.",
-  values: "Our core values are creativity, integrity, and client-centricity. We believe in pushing design boundaries while maintaining ethical practices and always putting our clients' needs first. Collaboration and open communication are key to our process.",
-  approach: "Our design approach is holistic and collaborative. We start by deeply understanding your aspirations and lifestyle. Then, we meticulously plan every detail, from space optimization to material selection, ensuring a cohesive and harmonious result. We manage projects with precision, ensuring they are delivered on time and within budget."
+  name: 'Aadhi Constructions and Interiors',
+  email: 'contact@aadhiconstructions.com',
+  phone: '+91 97891 16186',
+  address: '99-A, Pudupalayam Rd, Pudupalayam, Cuddalore, Tamil Nadu 607001, India',
+  history: "Aadhi Constructions and Interiors was founded with a vision to create spaces that are not only beautiful but also built to last. We've grown into a renowned design and construction studio, recognized for our commitment to quality, innovation, and client satisfaction. Our portfolio spans residential homes, dynamic commercial spaces, and everything in between.",
+  mission: "Our mission is to transform ordinary spaces into extraordinary experiences through robust construction and thoughtful design. We strive to understand our clients' visions and bring them to life with meticulous attention to detail.",
+  values: "Our core values are quality, integrity, and client-centricity. We believe in pushing design boundaries while maintaining the highest standards of construction and ethical practices.",
+  approach: "Our approach is holistic and collaborative. We manage projects with precision, from initial blueprints to the final coat of paint, ensuring they are delivered on time and within budget."
 };
 
 export const globalCtaContactInfo = {
-  address: "Krishna Nagar, Puducherry, 605013, India",
-  phoneNumbers: ["+91 91593 22233"],
-  email: "contact@pyinteriors.com",
+  address: "99-A, Pudupalayam Rd, Pudupalayam, Cuddalore, Tamil Nadu 607001, India",
+  phoneNumbers: ["+91 97891 16186"],
+  email: "contact@aadhiconstructions.com",
   businessHours: [
-    { day: "Monday - Saturday", time: "9:00 AM - 5:00 PM" },
-    { day: "Sunday", time: "Closed" },
+    { day: "Monday - Saturday", time: "9:00 AM - 9:00 PM" },
+    { day: "Sunday", time: "9:00 AM - 1:00 PM" },
   ],
   icons: {
     address: MapPin,
@@ -311,7 +312,7 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
   {
     id: 'expert-craftsmanship',
     title: 'Expert Craftsmanship',
-    description: 'Our team of skilled designers and artisans bring years of experience and a meticulous eye for detail to every project, ensuring the highest quality results.',
+    description: 'Our team of skilled builders and artisans bring years of experience and a meticulous eye for detail to every project, ensuring the highest quality results.',
     icon: ShieldCheck,
   },
   {
@@ -341,31 +342,31 @@ export type Testimonial = {
 
 export const testimonialsData: Testimonial[] = [
   {
-    id: 'testimonial-api-1',
-    quote: "I recently gave order to PY Interior in Pondicherry for an entertainment unit and wash basin unit, and the experience was outstanding. The team is professional, creative, and attentive to detail. Both units are stylish, functional, and perfectly complement my home. The project was completed on time and within budget. I highly recommend PY Interior for their excellent design services and craftsmanship.",
-    author: 'karthik michel',
-    role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=KM",
+    id: 'testimonial-1',
+    quote: "Aadhi Constructions transformed our house. Their attention to detail and commitment to quality was evident from start to finish. The project was completed on time and exceeded our expectations. Highly recommended!",
+    author: 'Priya S.',
+    role: 'Homeowner',
+    imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=PS",
     dataAiHint: 'person icon',
     rating: 5,
   },
   {
-    id: 'testimonial-api-2',
-    quote: "I had given them my new house kitchen interior works and they done a fabulous job and completed the project before the advised schedule at a more competitive cost. Mr. Arivan was great to work with! and explained clearly about the project and answered our queries patiently fom start to completion of the project! I would give them 5 stars and recommend to anyone for whole house interior works!",
-    author: 'Bala Murugan',
-    role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=BM",
+    id: 'testimonial-2',
+    quote: "Working with the Aadhi team was a great experience. They are professional, creative, and truly listen to their clients. Our new office interior is both beautiful and functional. A job well done.",
+    author: 'Ravi Kumar',
+    role: 'Business Owner',
+    imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=RK",
     dataAiHint: 'person icon',
-    rating: 5,
+    rating: 4,
   },
   {
-    id: 'testimonial-api-3',
-    quote: "Much recommended place to make your home look luxurious , the quality of work they provide is amazing , planning , giving more ideas and implementing as planned and handing over fully finished within the promised time !!",
-    author: 'SHALINTH ADITHYAN',
-    role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=SA",
+    id: 'testimonial-3',
+    quote: "They handled our renovation project with utmost professionalism. The quality of materials and the craftsmanship are top-notch. We're very happy with the final result.",
+    author: 'Anjali M.',
+    role: 'Client',
+    imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=AM",
     dataAiHint: 'person icon',
-    rating: 5,
+    rating: 4,
   },
 ];
 
@@ -389,14 +390,14 @@ export type HeroPageData = {
 
 export const heroPageData: HeroPageData = {
   tagline: {
-    text: 'Premium Interior Solutions',
+    text: 'Quality Construction & Interiors',
     icon: Sparkles,
   },
   mainHeadline: {
-    line1: 'Modern Interior',
-    line2: 'Design Studio',
+    line1: 'Aadhi Constructions',
+    line2: '& Interiors',
   },
-  mainParagraph: 'Specialized in Modular Kitchens, Mica Works & Wardrobe Works. Transforming homes with contemporary design and premium craftsmanship in Puducherry.',
+  mainParagraph: 'Your trusted partner in Cuddalore for building beautiful, functional spaces. From new constructions to bespoke interiors, we bring your vision to life with quality and care.',
   mainCta: {
     text: 'View Our Work',
     href: '/portfolio',
@@ -404,14 +405,14 @@ export const heroPageData: HeroPageData = {
   },
   mainImages: [
     {
-      src: '/py6.webp',
-      alt: 'Beautifully designed interior space by Py Interiors',
-      dataAiHint: 'modern interior',
+      src: 'https://images.unsplash.com/photo-1581092448342-571707a42aa0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Professional construction site with engineers',
+      dataAiHint: 'construction engineer',
     },
     {
-      src: '/py7.jpg',
-      alt: 'Another stunning interior project by Py Interiors',
-      dataAiHint: 'luxury design',
+      src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Modern and luxurious home interior',
+      dataAiHint: 'luxury interior',
     },
   ],
 };

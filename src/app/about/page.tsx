@@ -32,21 +32,21 @@ export default function AboutPage() {
       <section>
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="space-y-6">
-            <p className="text-sm text-primary font-semibold uppercase tracking-wider">01/ About Py Interiors</p>
+            <p className="text-sm text-primary font-semibold uppercase tracking-wider">01/ About Aadhi Constructions</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline text-foreground">
-              The Perfect Partner For Your Interior Needs
+              Building Your Vision, Creating Reality
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At Py Interiors, we believe that finding your dream space is more than a transaction; it’s a journey. With over a decade of experience, our team of dedicated professionals is committed to providing you with unparalleled service. That’s why we cater to your unique needs, whether you’re looking to design a new home or revamp an existing one.
+              At Aadhi Constructions and Interiors, we believe that great spaces are born from a combination of strong foundations and beautiful design. With years of experience, our team of dedicated professionals is committed to providing you with unparalleled service, from initial concept to final construction.
             </p>
           </div>
           <div className="relative w-full h-80 md:h-[500px] rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbnRlcmlvciUyMGRlc2lnbiUyMG9mZmljZXxlbnwwfHx8fDE3MTY0NzU4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Py Interiors modern office space"
+              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Aadhi Constructions modern building exterior"
               layout="fill"
               objectFit="cover"
-              data-ai-hint="modern office interior"
+              data-ai-hint="modern house exterior"
               priority
               className="rounded-lg"
             />
@@ -56,18 +56,18 @@ export default function AboutPage() {
 
       <hr className="border-border/50" />
 
-      {/* Section 2: Benefits - Which are your benefits? */}
+      {/* Section 2: Benefits - Why Choose Us? */}
       <section>
         <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-start mb-12">
             <div className="md:col-span-1">
                  <p className="text-sm text-primary font-semibold uppercase tracking-wider mb-2">02/ Our Philosophy</p>
                 <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">
-                    Why Choose Py Interiors?
+                    Why Choose Aadhi?
                 </h2>
             </div>
             <div className="md:col-span-2">
                 <p className="text-lg text-muted-foreground leading-relaxed mt-2 md:mt-9">
-                Our philosophy is built on a foundation of creativity, dedication, and a deep understanding of our clients&apos; aspirations. We are committed to delivering exceptional design that is both aesthetically pleasing and perfectly functional.
+                Our philosophy is built on a foundation of quality, dedication, and a deep understanding of our clients' aspirations. We are committed to delivering exceptional work that is both aesthetically pleasing and perfectly functional.
                 </p>
             </div>
         </div>
@@ -80,7 +80,7 @@ export default function AboutPage() {
 
       <hr className="border-border/50" />
 
-      {/* Section 3: Team - Team and Agents */}
+      {/* Section 3: Team - Our Experts */}
       <section>
         <SectionHeading number="03/ Our Experts" title="Meet Our Talented Team" />
         <div className="space-y-10 md:space-y-12">
