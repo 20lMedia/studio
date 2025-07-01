@@ -24,7 +24,7 @@ export function WhyChooseUsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">
-            Why Choose Py Interiors?
+            Why Choose Aadhi Constructions?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             We are dedicated to creating spaces that are not just beautiful, but also reflect your personality and enhance your lifestyle.

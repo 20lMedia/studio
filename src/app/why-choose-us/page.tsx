@@ -10,11 +10,11 @@ export default function WhyChooseUsPage() {
     <div className="space-y-16 md:space-y-24 py-8 md:py-12">
       <section className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-6">
-          Why Choose Py Interiors?
+          Why Choose Aadhi Constructions?
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
           Discover what sets us apart and why we are the trusted choice for discerning clients
-          seeking exceptional interior design and a seamless, collaborative experience.
+          seeking exceptional construction, design, and a seamless, collaborative experience.
         </p>
       </section>
 
@@ -37,8 +37,8 @@ export default function WhyChooseUsPage() {
       <section className="relative py-16 md:py-24 mt-12 md:mt-16 rounded-lg overflow-hidden bg-secondary/30">
          <div className="absolute inset-0 z-0 opacity-30">
             <Image
-                src="/cta-background-image.png"
-                alt="CTA background image"
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="CTA background image of construction"
                 layout="fill"
                 objectFit="cover"
                 className="pointer-events-none"
@@ -46,10 +46,10 @@ export default function WhyChooseUsPage() {
          </div>
         <div className="container mx-auto px-4 text-center relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold font-headline mb-6 text-foreground">
-            Ready to Begin Your Transformation?
+            Ready to Begin Your Project?
             </h2>
             <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Let&apos;s discuss your vision and how Py Interiors can bring it to life. 
+            Let&apos;s discuss your vision and how Aadhi can bring it to life. 
             Explore our services or get in touch for a personal consultation.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-3 text-base font-semibold rounded-md">
