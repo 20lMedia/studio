@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu } from 'lucide-react'; // Removed X as it's handled by SheetClose
 import { useState, useEffect } from 'react';
-import { navLinks } from '@/lib/data';
+import { navLinks, companyInfo } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Logo } from './Logo'; // Import the new Logo component
@@ -28,8 +28,8 @@ export function Navbar() {
     <header className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${isScrolled ? 'bg-background/90 backdrop-blur-lg shadow-lg' : 'bg-background/90 backdrop-blur-md'}`}>
       <div className="container mx-auto px-4">
         <div className="flex h-20 md:h-24 items-center justify-between">
-          <Link href="/" aria-label="Py Interiors Home" className="hover:opacity-80 transition-opacity duration-300 ease-in-out">
-            <Logo className="h-8 md:h-10 w-auto" />
+          <Link href="/" aria-label={`${companyInfo.name} Home`} className="hover:opacity-80 transition-opacity duration-300 ease-in-out">
+            <Logo className="h-10 md:h-12 w-auto" />
           </Link>
 
           <nav className="hidden md:flex space-x-6 lg:space-x-8">
@@ -57,8 +57,8 @@ export function Navbar() {
               <SheetContent side="right" className="w-[280px] bg-background p-6 shadow-xl">
                 <div className="flex flex-col space-y-8">
                   <div className="flex justify-between items-center">
-                     <Link href="/" aria-label="Py Interiors Home" onClick={closeMobileMenu}>
-                        <Logo className="h-8 w-auto" />
+                     <Link href="/" aria-label={`${companyInfo.name} Home`} onClick={closeMobileMenu}>
+                        <Logo className="h-10 w-auto" />
                       </Link>
                     {/* Default SheetClose (X button) is provided by SheetContent */}
                   </div>

@@ -12,10 +12,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           <div>
             <div className="mb-6">
-              <Link href="/" aria-label="Py Interiors Home" className="hover:opacity-80 transition-opacity duration-300 ease-in-out">
+              <Link href="/" aria-label={`${companyInfo.name} Home`} className="hover:opacity-80 transition-opacity duration-300 ease-in-out">
                 <Logo className="h-10 w-auto" />
               </Link>
-              <p className="text-xs text-muted-foreground mt-2 ml-1">Interior Solutions. From Idle to Ideal</p>
+              <p className="text-xs text-muted-foreground mt-2 ml-1">Quality Construction & Interiors</p>
             </div>
             <p className="text-sm mb-3 text-muted-foreground">{companyInfo.address}</p>
             <p className="text-sm mb-1"><Link href={`mailto:${companyInfo.email}`} className="hover:text-primary transition-colors duration-300 ease-in-out text-muted-foreground hover:underline">{companyInfo.email}</Link></p>
@@ -40,7 +40,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 pt-10 border-t border-border text-center">
-          <p className="text-xs text-muted-foreground mx-auto">&copy; {currentYear} Py Interiors. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground mx-auto">&copy; {currentYear} {companyInfo.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>
