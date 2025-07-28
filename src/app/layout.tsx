@@ -7,8 +7,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { GlobalCtaSection } from '@/components/layout/GlobalCtaSection';
 
 export const metadata: Metadata = {
-  title: 'Py Interiors - Sophisticated Interior Design',
-  description: 'Crafting beautiful and functional spaces with a touch of luxury.',
+  title: 'Aadhi Constructions and Interiors',
+  description: 'Top-quality construction and interior design services in Cuddalore, Tamil Nadu. We build your dreams.',
 };
 
 export default function RootLayout({

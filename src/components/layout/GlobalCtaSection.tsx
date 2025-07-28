@@ -8,7 +8,7 @@ export function GlobalCtaSection() {
   const AddressIcon = globalCtaContactInfo.icons.address;
   const PhoneIcon = globalCtaContactInfo.icons.phone;
   const EmailIcon = globalCtaContactInfo.icons.email;
-  // HoursIcon is no longer needed
+  const HoursIcon = globalCtaContactInfo.icons.hours;
 
   return (
     <section className="bg-background py-16 md:py-24">
@@ -18,7 +18,7 @@ export function GlobalCtaSection() {
             Start Your Project
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your space? Contact us for a free consultation and let&apos;s discuss your dream interior.
+            Ready to build or transform your space? Contact us for a free consultation and let's discuss your dream project.
           </p>
         </div>
 
@@ -60,8 +60,21 @@ export function GlobalCtaSection() {
                 </Link>
               </CardContent>
             </Card>
+            
+            <Card className="shadow-lg rounded-lg bg-card">
+                <CardHeader className="flex flex-row items-center space-x-4 p-5">
+                    <HoursIcon className="h-8 w-8 text-primary flex-shrink-0" />
+                    <CardTitle className="text-xl font-headline text-foreground/90">Business Hours</CardTitle>
+                </CardHeader>
+                <CardContent className="p-5 pt-0">
+                    {globalCtaContactInfo.businessHours.map((item, index) => (
+                        <p key={index} className="text-muted-foreground">
+                            <strong>{item.day}:</strong> {item.time}
+                        </p>
+                    ))}
+                </CardContent>
+            </Card>
 
-            {/* Business Hours Card Removed */}
           </div>
 
           {/* Right Column: Form */}
@@ -75,4 +88,3 @@ export function GlobalCtaSection() {
     </section>
   );
 }
-

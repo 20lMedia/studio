@@ -12,11 +12,11 @@ export default function ContactPage() {
       <section>
         <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden shadow-xl">
           <Image
-            src={`https://source.unsplash.com/featured/1200x400/?${encodeURIComponent('office cityscape')}`}
-            alt="Contact Py Interiors - Modern office view"
+            src={`https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+            alt="Contact Aadhi Constructions - Modern office building"
             layout="fill"
             objectFit="cover"
-            data-ai-hint="office cityscape"
+            data-ai-hint="office building exterior"
             priority
             className="rounded-lg"
           />
@@ -94,7 +94,7 @@ export default function ContactPage() {
             allowFullScreen={false}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Company Location Map for Py Interiors"
+            title={`Company Location Map for ${companyInfo.name}`}
           ></iframe>
         </div>
       </section>
