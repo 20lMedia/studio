@@ -104,5 +104,3 @@ export default function ProjectDetailPage({ params }: { params: { projectId: str
     </div>
   );
 }
-
-    

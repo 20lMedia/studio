@@ -49,7 +49,7 @@ export async function submitGlobalCtaForm(
 
   // Example:
   // await sendEmail({
-  //   to: "srilakshmiinteriors1@gmail.com",
+  //   to: "contact@aadhiconstructions.com",
   //   subject: `New Project Inquiry: ${parsed.data.serviceRequired}`,
   //   html: `
   //     <p>Name: ${parsed.data.fullName}</p>
