@@ -42,11 +42,7 @@ export const projects: Project[] = [
     longDescription: 'This project involved a full-scale renovation of an old industrial loft. We focused on open-plan living, maximizing natural light, and incorporating custom-built furniture. The design features a neutral palette with bold accents, polished concrete floors, and exposed brickwork, creating a sophisticated urban retreat.',
     imageUrl: {
       src: 'https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8aW50ZXJpb3J8ZW58MHx8fHwxNzUwMjM1NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-<<<<<<< HEAD
-      alt: 'Stylish modern loft interior designed by Py Interiors',
-=======
       alt: 'Stylish modern loft interior design by Aadhi Constructions and Interiors',
->>>>>>> 395a856dc391925ca64beb5a3c6017f272c526c0
       dataAiHint: 'modern loft',
     },
     category: 'Residential',
@@ -86,11 +82,7 @@ export const projects: Project[] = [
     longDescription: 'This apartment design focuses on simplicity, functionality, and tranquility. We used a light color palette, natural materials like wood and linen, and clever storage solutions to maintain a clutter-free environment. The result is a peaceful haven that promotes relaxation and mindfulness.',
     imageUrl: {
       src: 'https://images.unsplash.com/photo-1501876725168-00c445821c9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxNaW5pbWFsaXN0JTIwQXBhcnRtZW50fGVufDB8fHx8MTc1MDIzNTQ2NHww&ixlib=rb-4.1.0&q=80&w=1080',
-<<<<<<< HEAD
-      alt: 'Serene minimalist apartment designed by Py Interiors',
-=======
       alt: 'Serene minimalist apartment by Aadhi Constructions and Interiors',
->>>>>>> 395a856dc391925ca64beb5a3c6017f272c526c0
       dataAiHint: 'minimalist apartment',
     },
     category: 'Residential',
@@ -111,11 +103,7 @@ export const projects: Project[] = [
     longDescription: 'This co-working space was designed to foster creativity and collaboration. It features a mix of private offices, open-plan work areas, and comfortable breakout zones. Bold colors, ergonomic furniture, and biophilic design elements contribute to a productive and energizing atmosphere.',
     imageUrl: {
       src: 'https://images.unsplash.com/photo-1634712282287-14ed57b9cc89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8aW50ZXJpb3J8ZW58MHx8fHwxNzUwMjM1NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-<<<<<<< HEAD
-      alt: 'Vibrant co-working space designed by Py Interiors',
-=======
       alt: 'Vibrant co-working space design by Aadhi Constructions and Interiors',
->>>>>>> 395a856dc391925ca64beb5a3c6017f272c526c0
       dataAiHint: 'coworking space',
     },
     category: 'Commercial',
@@ -355,53 +343,29 @@ export type Testimonial = {
 
 export const testimonialsData: Testimonial[] = [
   {
-<<<<<<< HEAD
-    id: 'api-review-1',
-    quote: "I recently gave order to PY Interior in Pondicherry for an entertainment unit and wash basin unit, and the experience was outstanding. The team is professional, creative, and attentive to detail. Both units are stylish, functional, and perfectly complement my home. The project was completed on time and within budget. I highly recommend PY Interior for their excellent design services and craftsmanship.",
-    author: 'karthik michel',
-    role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=KM",
-=======
     id: 'testimonial-1',
     quote: "Aadhi Constructions transformed our house. Their attention to detail and commitment to quality was evident from start to finish. The project was completed on time and exceeded our expectations. Highly recommended!",
     author: 'Priya S.',
     role: 'Homeowner',
     imageUrl: "https://placehold.co/100x100/EBD7D0/4A3B34?text=PS",
->>>>>>> 395a856dc391925ca64beb5a3c6017f272c526c0
     dataAiHint: 'person icon',
     rating: 5,
   },
   {
-<<<<<<< HEAD
-    id: 'api-review-2',
-    quote: "I had given them my new house kitchen interior works and they done a fabulous job and completed the project before the advised schedule at a more competitive cost. Mr. Arivan was great to work with! and explained clearly about the project and answered our queries patiently fom start to completion of the project!\n\nI would give them 5 stars and recommend to anyone for whole house interior works!",
-    author: 'Bala Murugan',
-    role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=BM",
-=======
     id: 'testimonial-2',
     quote: "Working with the Aadhi team was a great experience. They are professional, creative, and truly listen to their clients. Our new office interior is both beautiful and functional. A job well done.",
     author: 'Ravi Kumar',
     role: 'Business Owner',
     imageUrl: "https://placehold.co/100x100/D0E0EB/344A4A?text=RK",
->>>>>>> 395a856dc391925ca64beb5a3c6017f272c526c0
     dataAiHint: 'person icon',
     rating: 4,
   },
   {
-<<<<<<< HEAD
-    id: 'api-review-3',
-    quote: "Much recommended place to make your home look luxurious , the quality of work they provide is amazing , planning , giving more ideas and implementing as planned and handing over fully finished within the promised time !!",
-    author: 'SHALINTH ADITHYAN',
-    role: 'Client Review',
-    imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=SA",
-=======
     id: 'testimonial-3',
     quote: "They handled our renovation project with utmost professionalism. The quality of materials and the craftsmanship are top-notch. We're very happy with the final result.",
     author: 'Anjali M.',
     role: 'Client',
     imageUrl: "https://placehold.co/100x100/E0EBD0/4A4A34?text=AM",
->>>>>>> 395a856dc391925ca64beb5a3c6017f272c526c0
     dataAiHint: 'person icon',
     rating: 4,
   },
@@ -442,16 +406,6 @@ export const heroPageData: HeroPageData = {
   },
   mainImages: [
     {
-<<<<<<< HEAD
-      src: '/py6.webp',
-      alt: 'Modern interior living space',
-      dataAiHint: 'modern interior',
-    },
-    {
-      src: '/py7.jpg',
-      alt: 'Elegant kitchen design',
-      dataAiHint: 'luxury design',
-=======
       src: 'https://images.unsplash.com/photo-1581092448342-571707a42aa0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'Professional construction site with engineers',
       dataAiHint: 'construction engineer',
@@ -460,10 +414,11 @@ export const heroPageData: HeroPageData = {
       src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'Modern and luxurious home interior',
       dataAiHint: 'luxury interior',
->>>>>>> 395a856dc391925ca64beb5a3c6017f272c526c0
     },
   ],
 };
 
+
+    
 
     
